@@ -1,0 +1,53 @@
+:: StoryTitle
+WhichTool
+
+:: StoryAuthor {"position":"268,439","size":"100,100"}
+brought to you by Kawa#7680
+
+
+:: StorySubtitle {"position":"392,432","size":"100,100"}
+We are all love blaseball.
+
+
+:: StoryData
+{
+  "ifid": "F79B1E6A-7782-4099-B834-867C0F5CA858",
+	"format": "SugarCube",
+	"format-version": "2.30.0",
+	"start": "Intro",
+	"zoom": 0.6
+}
+
+
+:: Story Stylesheet [stylesheet]
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+html {
+  height: 100%;
+}
+
+body, tw-story
+{
+  font-family: 'Lora', serif;
+  margin-left: 2em;
+  height: 100%;
+}
+
+}
+
+:: Intro {"position":"1100,50","size":"100,100"}
+Congratulations on enjoying the cultural event of Blaseball! 
+
+What are you searching for?
+[[A Discord bot|DiscordBots]]
+[[A web site or graphical interface|WobSites]]
+[[Just give me a firehose of data|NumberCrunchy]]
+
+:: DiscordBots {"position":"1300, 25"}
+What are you hoping for your bot to do?
+
+:: WobSites {"position":"1300,50"}
+What are you hoping to see?
+
+:: NumberCrunchy {"position":"1300,75"}
