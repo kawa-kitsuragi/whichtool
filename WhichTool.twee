@@ -51,3 +51,14 @@ What are you hoping for your bot to do?
 What are you hoping to see?
 
 :: NumberCrunchy {"position":"1300,75"}
+Welcome to the firehose. What do you want?
+
+[[Direct from the tap, fast and somewhat messy|OfficialAPI]]
+[[Seasonal and historical data, in mostly raw form|Chronicler]]
+[[Derived performance data, like batting averages|Datablase]]
+
+:: OfficialAPI
+
+:: Chronicler
+
+:: Datablase
