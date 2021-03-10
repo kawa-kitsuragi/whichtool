@@ -6,7 +6,7 @@ brought to you by Kawa#7680
 
 
 :: StorySubtitle {"position":"392,432","size":"100,100"}
-We are all love blaseball.
+If this tool doesn't help, or your needs are more specific, feel free to join us at https://discord.sibr.dev, specifically the "Help Desk" channel, and we can get you where you need to go.
 
 
 :: StoryData
@@ -20,7 +20,6 @@ We are all love blaseball.
 
 
 :: Story Stylesheet [stylesheet]
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 html {
@@ -46,9 +45,19 @@ What are you searching for?
 
 :: DiscordBots {"position":"1300, 25"}
 What are you hoping for your bot to do?
+[[Teach me about concessions|SnaxBot]]
+[[Let me look up players and teams|BlasebotA]]
+[[Tell me what's happening in games|BlasebotB]]
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
+[[Teach me about concessions|SnaxSheet]]
+[[Past game logs and schedules|Reblase]]
+[[Player stats right now|Abslve]]
+[[Player stars changing over time|Hloroscopes]]
+[[Vibes over the course of a season|VibeCheck]]
+[[Comparing teams to each other|Chartographer]]
+[[Derived performance like batting averages|BlaseballReference]]
 
 :: NumberCrunchy {"position":"1300,75"}
 Welcome to the firehose. What do you want?
@@ -56,6 +65,7 @@ Welcome to the firehose. What do you want?
 [[Direct from the tap, fast and somewhat messy|OfficialAPI]]
 [[Seasonal and historical data, in mostly raw form|Chronicler]]
 [[Derived performance data, like batting averages|Datablase]]
+[[Some combo of the above, and by the way I'm using Python|Mike]]
 
 :: OfficialAPI
 
