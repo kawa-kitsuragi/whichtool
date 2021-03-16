@@ -21,6 +21,7 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 
 :: Story Stylesheet [stylesheet]
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap')
 
 html {
   height: 100%;
@@ -33,6 +34,10 @@ body, tw-story
   height: 100%;
 }
 
+.channel {
+  font-family: 'Roboto Mono', monospace;
+}
+
 }
 
 :: Intro {"position":"1100,50","size":"100,100"}
@@ -42,12 +47,59 @@ What are you searching for?
 [[A Discord bot|DiscordBots]]
 [[A web site or graphical interface|WobSites]]
 [[Just give me a firehose of data|NumberCrunchy]]
+[[Something else|Other]]
 
 :: DiscordBots {"position":"1300, 25"}
 What are you hoping for your bot to do?
-[[Teach me about concessions|SnaxBot]]
-[[Let me look up players and teams|BlasebotA]]
-[[Tell me what's happening in games|BlasebotB]]
+[[Teach me about concessions, tell me who to idol|SnaxBot]]
+[[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
+[[Tell me what's happening in games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
+
+:: SnaxBot
+
+<<set $bot_choice to "SnaxBot">>
+
+Our friendly local Food Court Jester can help you pick out snacks and idols! Brought to you by tehstone and nago.
+
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in {{{#roles-and-sigils}}}, then head to {{{#snax-factory}}} in Automata to get set up with your snaxfolio. 
+
+<<include JoinUsForBots>>
+
+If you'd like, you can check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/blob/master/watcher/exts/snaxcog.py]] or [[for the optimizer itself|https://gitlab.com/-/snippets/2088936]].
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
+:: Blasebot
+
+<<set $bot_choice to "Blasebot">>
+Blasebot has a bunch of interesting uses in terms of look ups and summaries of games sent directly to your server!
+
+<<if $blasebot_var is "lookup">>
+
+<<include JoinUsForBots>>
+<<endif>>
+
+You can check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
+
+<<if $blasebot_var is "alerts">>
+You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. Bring development questions and bug reports to @@.channel;#blasebot-project@@ in Major Projects.
+<<endif>>
+
+If you'd like, you can also support Fox's efforts directly through stars' [[Patreon|https://www.patreon.com/beefox]].
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
+:: JoinUsForBots 
+
+<<if $bot_choice is "SnaxBot">>
+<<set _automata_channel to "#snax-factory">>
+<<set _dev_channel to "#snax-bot">>
+<<else>>
+<<set _automata_channel to "#blasebot-usage">>
+<<set _dev_channel to "#blasebot-project">>
+<<endif>>
+
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
@@ -58,6 +110,23 @@ What are you hoping to see?
 [[Vibes over the course of a season|VibeCheck]]
 [[Comparing teams to each other|Chartographer]]
 [[Derived performance like batting averages|BlaseballReference]]
+[[Teach me to imitate a squid|HallMonitor]]
+
+:: SnaxSheet
+
+:: Reblase
+
+:: Abslve
+
+:: Hloroscopes
+
+:: VibeCheck
+
+:: Chartographer
+
+:: BlaseballReference
+
+:: HallMonitor
 
 :: NumberCrunchy {"position":"1300,75"}
 Welcome to the firehose. What do you want?
@@ -72,3 +141,18 @@ Welcome to the firehose. What do you want?
 :: Chronicler
 
 :: Datablase
+
+:: Mike
+
+:: Other
+What could you be looking for?
+
+[[Tell me about this tool|MetaWhich]]
+[[Tell me about these weird faces|BallClarks]]
+[[Tell me about fishery management|Salmon]]
+
+:: MetaWhich
+
+:: BallClarks
+
+:: Salmon
