@@ -36,6 +36,7 @@ body, tw-story
 
 .channel {
   font-family: 'Roboto Mono', monospace;
+  white-space: 'pre-line'
 }
 
 }
@@ -61,8 +62,6 @@ What are you hoping for your bot to do?
 
 Our friendly local Food Court Jester can help you pick out snacks and idols! Brought to you by tehstone and nago.
 
-Visit us [[on the server|https://discord.sibr.dev]], pick out a role in {{{#roles-and-sigils}}}, then head to {{{#snax-factory}}} in Automata to get set up with your snaxfolio. 
-
 <<include JoinUsForBots>>
 
 If you'd like, you can check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/blob/master/watcher/exts/snaxcog.py]] or [[for the optimizer itself|https://gitlab.com/-/snippets/2088936]].
@@ -75,7 +74,6 @@ If you'd like, you can check out the [[source for the bot|https://github.com/teh
 Blasebot has a bunch of interesting uses in terms of look ups and summaries of games sent directly to your server!
 
 <<if $blasebot_var is "lookup">>
-
 <<include JoinUsForBots>>
 <<endif>>
 
