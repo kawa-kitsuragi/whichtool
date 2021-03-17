@@ -80,7 +80,7 @@ Blasebot has a bunch of interesting uses in terms of look ups and summaries of g
 You can check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
 
 <<if $blasebot_var is "alerts">>
-You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. Bring development questions and bug reports to @@.channel;#blasebot-project@@ in Major Projects.
+You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. Bring development questions and bug reports to @@.channel;\#blasebot-project@@ in Major Projects.
 <<endif>>
 
 If you'd like, you can also support Fox's efforts directly through stars' [[Patreon|https://www.patreon.com/beefox]].
@@ -90,14 +90,14 @@ If you'd like, you can also support Fox's efforts directly through stars' [[Patr
 :: JoinUsForBots 
 
 <<if $bot_choice is "SnaxBot">>
-<<set _automata_channel to "#snax-factory">>
-<<set _dev_channel to "#snax-bot">>
+<<set _automata_channel to "\#snax-factory">>
+<<set _dev_channel to "\#snax-bot">>
 <<else>>
-<<set _automata_channel to "#blasebot-usage">>
-<<set _dev_channel to "#blasebot-project">>
+<<set _automata_channel to "\#blasebot-usage">>
+<<set _dev_channel to "\#blasebot-project">>
 <<endif>>
 
-Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;\#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
@@ -112,7 +112,19 @@ What are you hoping to see?
 
 :: SnaxSheet
 
+A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;\#stats@@ on main unless we figure out some weird way to get this to auto-update with a new link regularly. 
+
+Talk about this usually is in @@.channel;\#💰-economy@@ under 'Research'.
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
 :: Reblase
+
+[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. 
+
+[[Here's the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] Talk about development is in @@.channel;\#reblase@@ under 'Major Projects'.
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
 :: Abslve
 
