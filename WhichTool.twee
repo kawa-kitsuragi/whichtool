@@ -18,6 +18,10 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 	"zoom": 0.6
 }
 
+:: StoryInit
+<<set $bot_choice to "null">> 
+<<set $snax_var to "null">>
+<<set $blasebot_var to "null">>
 
 :: Story Stylesheet [stylesheet]
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
@@ -47,24 +51,27 @@ Congratulations on enjoying the cultural event of Blaseball!
 What are you searching for?
 [[A Discord bot|DiscordBots]]
 [[A web site or graphical interface|WobSites]]
-[[Just give me a firehose of data|NumberCrunchy]]
+[[I'm building my own tool or analysis, I need the firehose|NumberCrunchy]]
 [[Something else|Other]]
 
 :: DiscordBots {"position":"1300, 25"}
 What are you hoping for your bot to do?
-[[Teach me about concessions, tell me who to idol|SnaxBot]]
+[[Teach me about concessions|SnaxBot][$snax_var to "snacks"]]
+[[Tell me who to idol|SnaxBot][$snax_var to "idols"]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
-[[Tell me what's happening in games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
+[[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
+[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
 
 :: SnaxBot
 
 <<set $bot_choice to "SnaxBot">>
-
-Our friendly local Food Court Jester can help you pick out snacks and idols! Brought to you by tehstone and nago.
+Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
 
 <<include JoinUsForBots>>
 
-If you'd like, you can check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/blob/master/watcher/exts/snaxcog.py]] or [[for the optimizer itself|https://gitlab.com/-/snippets/2088936]].
+<<if $snax_var is "idols">>You can also "follow" the @@.channel.;#pendant-recommendations@@ channel in your own Discord server. <</if>>
+
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]]. 
 
 [[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
@@ -77,27 +84,40 @@ Blasebot has a bunch of interesting uses in terms of look ups and summaries of g
 <<include JoinUsForBots>>
 <<endif>>
 
-You can check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
+Check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
 
 <<if $blasebot_var is "alerts">>
-You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. Bring development questions and bug reports to @@.channel;\#blasebot-project@@ in Major Projects.
+You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. Bring development questions and bug reports to @@.channel;#blasebot-project@@ in Major Projects.
 <<endif>>
 
 If you'd like, you can also support Fox's efforts directly through stars' [[Patreon|https://www.patreon.com/beefox]].
 
 [[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
-:: JoinUsForBots 
+:: CoolEvents
 
-<<if $bot_choice is "SnaxBot">>
-<<set _automata_channel to "\#snax-factory">>
-<<set _dev_channel to "\#snax-bot">>
-<<else>>
-<<set _automata_channel to "\#blasebot-usage">>
-<<set _dev_channel to "\#blasebot-project">>
+The Monitor watches for cycles, perfect games, and the like. It's brought to you by tehstone.
+
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;#statistical-significance@@ to see what it's found. You can also Follow it on your own server for your own alerts!
+
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]].
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
+:: JoinUsForBots [nobr]
+
+<<if $snax_var is "snacks">>
+  <<set _automata_channel to "#snax-factory">>
+  <<set _dev_channel to "#snax-bot">>
+<<elseif $snax_var is "idols">>
+  <<set _automata_channel to "#pendant-recommendations">>
+  <<set _dev_channel to "$pendant-rec-bot">>
+<<else>> /* blasebot */
+  <<set _automata_channel to "#blasebot-usage">>
+  <<set _dev_channel to "#blasebot-project">>
 <<endif>>
 
-Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;\#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
@@ -106,33 +126,66 @@ What are you hoping to see?
 [[Player stats right now|Abslve]]
 [[Player stars changing over time|Hloroscopes]]
 [[Vibes over the course of a season|VibeCheck]]
-[[Comparing teams to each other|Chartographer]]
+[[Comparing teams to each other this season|Chartographer]]
+[[Win/Loss in this season and past ones|ChartParty]]
 [[Derived performance like batting averages|BlaseballReference]]
 [[Teach me to imitate a squid|HallMonitor]]
 
 :: SnaxSheet
 
-A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;\#stats@@ on main unless we figure out some weird way to get this to auto-update with a new link regularly. 
+A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
-Talk about this usually is in @@.channel;\#💰-economy@@ under 'Research'.
+Talk about this usually is in @@.channel;#💰-economy@@ under 'Research'.
 
 [[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
 :: Reblase
 
-[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. 
+[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. Brought to you by Astrid.
 
-[[Here's the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] Talk about development is in @@.channel;\#reblase@@ under 'Major Projects'.
+[[Here's the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] Talk about development is in @@.channel;#reblase@@ under 'Major Projects'.
 
 [[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
 :: Abslve
 
+[[Abslve|https://slavfox.space/abslve/#SUN]] shows you star ratings for any player, by team. 
+
+You can click the "Want that Forbidden Knowledge?" link at the bottom for unrounded stars and "apple stats", such as ruthlessness and shakesperianism. From there, you can click that "most Forbidden Knowledge" link to also see these stats for players in the Shadows.
+
+It's robust, but somewhat unwieldy and not being actively maintained. (Indeed, its Forbidden Knowledge barriers are reflective of a time before the Apple.) A new version of this is in the works by other developers, but this is the best source we have now.
+
+Its source code is [[here|https://github.com/slavfox/abslve]].
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
 :: Hloroscopes
+
+[[Hloroscopes|http://yoori.space/hloroscopes/]] plots how players' stars change over time (after events like blood drains, blessings, and the like). It's brought to you by yooori.
+
+It includes toggles for Forbidden Knowledge and spacing of the x axis.
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
 :: VibeCheck
 
+[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a team vibe as well, but currently doesn't reflect pitcher rotations correctly. It's brought to you by dlareau.
+
+Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
 :: Chartographer
+
+[[Chartographer|https://chartographer.sibr.dev/]] has a number of ways to compare teams against each other in the current season - the sums and averages of team stars in each of the categories, as well as Win/Loss graphs. It's brought to you by Cheeseyx.
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
+
+:: ChartParty
+
+[[ChartParty|http://yoori.space/chartparty]] plots win/loss charts for teams, including the option to look at past seasons. It's brought to you by yooori.
+
+[[I'm sorry, this isn't what I'm looking for. Let me restart.|Intro]]
 
 :: BlaseballReference
 
