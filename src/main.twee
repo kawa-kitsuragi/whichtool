@@ -1,0 +1,85 @@
+/* This file is for the 'main flow' - intialization and things shared by multiple end points. Individual end points get their own pages. */
+
+:: StoryTitle
+WhichTool
+
+:: StoryAuthor {"position":"268,439","size":"100,100"}
+brought to you by Kawa#7680
+
+
+:: StorySubtitle {"position":"392,432","size":"100,100"}
+If this tool doesn't help, or your needs are more specific, feel free to join us at https://discord.sibr.dev, specifically the "Help Desk" channel, and we can get you where you need to go.
+
+
+:: StoryData
+{
+  "ifid": "F79B1E6A-7782-4099-B834-867C0F5CA858",
+	"format": "SugarCube",
+	"format-version": "2.30.0",
+	"start": "Intro",
+	"zoom": 0.6
+}
+
+:: StoryInit
+<<set $bot_choice to "null">> 
+<<set $snax_var to "null">>
+<<set $blasebot_var to "null">>
+
+:: Intro {"position":"1100,50","size":"100,100"}
+Congratulations on enjoying the cultural event of Blaseball! 
+
+What are you searching for?
+[[A Discord bot|DiscordBots]]
+[[A web site or graphical interface|WobSites]]
+[[I'm building my own tool or analysis, I need the firehose|NumberCrunchy]]
+[[Something else|Other]]
+
+:: DiscordBots {"position":"1300, 25"}
+What are you hoping for your bot to do?
+[[Teach me about concessions|SnaxBot][$snax_var to "snacks"]]
+[[Tell me who to idol|SnaxBot][$snax_var to "idols"]]
+[[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
+[[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
+[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
+
+:: JoinUsForBots [nobr]
+/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
+<<if $snax_var is "snacks">>
+  <<set _automata_channel to "#snax-factory">>
+  <<set _dev_channel to "#snax-bot">>
+<<elseif $snax_var is "idols">>
+  <<set _automata_channel to "#pendant-recommendations">>
+  <<set _dev_channel to "$pendant-rec-bot">>
+<<else>> /* blasebot */
+  <<set _automata_channel to "#blasebot-usage">>
+  <<set _dev_channel to "#blasebot-project">>
+<<endif>>
+
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.
+
+:: WobSites {"position":"1300,50"}
+What are you hoping to see?
+[[Teach me about concessions, schedules, and matchups|SnaxSheet]]
+[[Past game logs and schedules|Reblase]]
+[[Player stats right now|Abslve]]
+[[Player stars changing over time|Hloroscopes]]
+[[Vibes over the course of a season|VibeCheck]]
+[[Comparing teams to each other this season|Chartographer]]
+[[Win/Loss in this season and past ones|ChartParty]]
+[[Derived performance like batting averages|BlaseballReference]]
+[[Teach me to imitate a squid|HallMonitor]]
+
+:: NumberCrunchy {"position":"1300,75"}
+Welcome to the firehose. What do you want?
+
+[[Direct from the tap, fast and somewhat messy|OfficialAPI]]
+[[Seasonal and historical data, in mostly raw form|Chronicler]]
+[[Derived performance data, like batting averages|Datablase]]
+[[Some combo of the above, and by the way I'm using Python|Mike]]
+
+:: Other
+What could you be looking for?
+
+[[Tell me about this tool|MetaWhich]]
+[[Tell me about these weird faces|BallClarks]]
+[[Tell me about fishery management|Salmon]]
