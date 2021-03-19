@@ -5,4 +5,4 @@ SetWorkingDir %A_ScriptDir%
 
 ;type in the word between :c1: and :: for the abbreviation to work.
 
-:C1:+ch::@@.channel#@@
+:C1:+ch::@@.channel;#@@
