@@ -23,8 +23,8 @@ jobs:
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
-          tweego WhichTool.twee -o dist/index.html
-          tweego WhichTool.twee -o WhichTool.html
+          tweego src -o dist/index.html
+          tweego src -o WhichTool.html
 
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v2
