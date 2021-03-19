@@ -1,0 +1,5 @@
+:: VibeCheck
+
+[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn't reflect pitcher rotations correctly. It's brought to you by dlareau.
+
+Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].

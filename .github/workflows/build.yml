@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**.twee'
+      - 'src/**'
     branches:
       - main
 

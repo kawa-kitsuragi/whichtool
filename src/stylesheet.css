@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap')
+
+html {
+  height: 100%;
+}
+
+body, tw-story
+{
+  font-family: 'Lora', serif;
+  margin-left: 2em;
+  height: 100%;
+}
+
+/* not actually implemented yet - the JS doesn't hook to anything */
+.light-mode {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.channel {
+  font-family: 'Roboto Mono', monospace;
+  white-space: 'pre-line'
+}
+

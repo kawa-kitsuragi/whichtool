@@ -1,0 +1,10 @@
+:: SnaxBot
+
+<<set $bot_choice to "SnaxBot">>
+Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
+
+<<include JoinUsForBots>>
+
+<<if $snax_var is "idols">>You can also "follow" the @@.channel;#pendant-recommendations@@ channel in your own Discord server. <</if>>
+
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]]. 
