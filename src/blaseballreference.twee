@@ -1,0 +1,7 @@
+:: BlaseballReference
+
+[[Blaseball-Reference|https://blaseball-reference.com/]] displays "derived statistics" about players and teams, including leaderboards for various metrics. If you're coming from a baseball background, or want to understand actual past performance (as opposed to apple stats) it's invaluable. There's CSV exports as well for many pages, for you to use for your own analyses!
+
+It's brought to you by shibboh. [[Source code here.|https://github.com/mjhale/blaseball-reference.com]]
+
+Developer discussion is at @@.channel.#blaseball-reference@@ under 'Major Projects'.
