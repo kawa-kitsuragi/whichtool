@@ -12,7 +12,7 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 
 :: StoryMenu
 /* <<link "Toggle light/dark mode">>
- to do: figure out how to hook this into the JS 
+ to do: figure out how to hook this into the JS
 <</link>> */
 
 :: StoryData
@@ -25,12 +25,12 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 }
 
 :: StoryInit
-<<set $bot_choice to "null">> 
+<<set $bot_choice to "null">>
 <<set $snax_var to "null">>
 <<set $blasebot_var to "null">>
 
 :: Intro {"position":"1100,50","size":"100,100"}
-Congratulations on enjoying the cultural event of Blaseball! 
+Congratulations on enjoying the cultural event of Blaseball!
 
 What are you searching for?
 [[A Discord bot|DiscordBots]]
@@ -42,6 +42,7 @@ What are you searching for?
 What are you hoping for your bot to do?
 [[Teach me about concessions|SnaxBot][$snax_var to "snacks"]]
 [[Tell me who to idol|SnaxBot][$snax_var to "idols"]]
+[[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
 [[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
 [[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
@@ -54,6 +55,9 @@ What are you hoping for your bot to do?
 <<elseif $snax_var is "idols">>
   <<set _automata_channel to "#pendant-recommendations">>
   <<set _dev_channel to "$pendant-rec-bot">>
+<<elseif $bot_choice is "Yuuko">>
+  <<set _automata_channel to "#bot-crimes">>
+  <<set _dev_channel to "#crisp">>
 <<else>> /* blasebot */
   <<set _automata_channel to "#blasebot-usage">>
   <<set _dev_channel to "#blasebot-project">>
@@ -64,7 +68,7 @@ Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.chann
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
 
-Current statuses: 
+Current statuses:
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
 [[Player stats right now|Abslve]]
 [[Vibes over the course of the current season|VibeCheck]]
