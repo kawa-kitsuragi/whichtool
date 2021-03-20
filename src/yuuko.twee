@@ -6,4 +6,4 @@ Well, uh, now you can.
 <<set $bot_choice to "Yuuko">>
 <<include JoinUsForBots>>
 
-Yuuko is made by allie (sapphicfettucine/alisww), using the CRiSP Harvest Model and salmon_lib. [[find the source code here|https://github.com/alisww/yuuko]]
+Yuuko is made by allie (sapphicfettucine/alisww), using the CRiSP Harvest Model and salmon_lib. [[Find the source code here|https://github.com/alisww/yuuko]].
