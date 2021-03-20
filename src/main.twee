@@ -59,15 +59,23 @@ Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.chann
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
+
+Current statuses: 
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
-[[Past game logs and schedules|Reblase]]
 [[Player stats right now|Abslve]]
-[[Player stars changing over time|Hloroscopes]]
-[[Vibes over the course of a season|VibeCheck]]
+[[Vibes over the course of the current season|VibeCheck]]
 [[Comparing teams to each other this season|Chartographer]]
+[[How many games to the playoffs/party time|PlayoffTables]]
+
+Current and historical data:
+[[Past game logs and schedules|Reblase]]
 [[Win/Loss in this season and past ones|ChartParty]]
-[[Derived performance like batting averages|BlaseballReference]]
+[[Schedules and derived performance like batting averages|BlaseballReference]]
+[[Player stars changing over time|Hloroscopes]]
+
+Other:
 [[Teach me to imitate a squid|HallMonitor]]
+[[Help me come up with blaseball-y names|Onomancer]]
 
 :: NumberCrunchy {"position":"1300,75"}
 Welcome to the firehose. What do you want?
@@ -80,6 +88,7 @@ Welcome to the firehose. What do you want?
 :: Other
 What could you be looking for?
 
+[[Have a bot announce blaseball games for me|Jlohn]]
 [[Tell me about this tool|MetaWhich]]
 [[Tell me about these weird faces|BallClarks]]
 [[Tell me about fishery management|Salmon]]
