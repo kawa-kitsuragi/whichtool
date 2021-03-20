@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F79B1E6A-7782-4099-B834-867C0F5CA858// --><tw-storydata name="WhichTool" startnode="11" creator="Tweego" creator-version="2.1.1" ifid="F79B1E6A-7782-4099-B834-867C0F5CA858" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+	<!-- UUID://F79B1E6A-7782-4099-B834-867C0F5CA858// --><tw-storydata name="WhichTool" startnode="13" creator="Tweego" creator-version="2.1.1" ifid="F79B1E6A-7782-4099-B834-867C0F5CA858" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap')
 
 html {
@@ -159,24 +159,28 @@ Developer discussion is at @@.channel;#projects@@ in &#39;Getting Involved&#39;.
 
 Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;#statistical-significance@@ to see what it&#39;s found. You can also Follow it on your own server for your own alerts!
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]].</tw-passagedata><tw-passagedata pid="7" name="Hloroscopes" tags="" position="850,100" size="100,100">[[Hloroscopes|http://yoori.space/hloroscopes/]] plots how players&#39; stars change over time (after events like blood drains, blessings, and the like). It&#39;s brought to you by yooori.
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]].</tw-passagedata><tw-passagedata pid="7" name="HallMonitor" tags="" position="850,100" size="100,100">You can visit the [[Hall Monitor|https://squid.sibr.dev]] or the [[Food and Beverage Inspector|https://squid.sibr.dev/?hat=chef]], and feel free to use Inspect Element to create your own squiddish shenanigans. Brought to you collectively by the Council of Diviners.
+
+Source code [[here|https://github.com/Society-for-Internet-Blaseball-Research/squid]].</tw-passagedata><tw-passagedata pid="8" name="Hloroscopes" tags="" position="975,100" size="100,100">[[Hloroscopes|http://yoori.space/hloroscopes/]] plots how players&#39; stars change over time (after events like blood drains, blessings, and the like). It&#39;s brought to you by yooori.
 
 It includes toggles for Forbidden Knowledge and spacing of the x axis.
 
-Developer discussion is at @@.channel;#projects@@ in &#39;Getting Involved&#39;.</tw-passagedata><tw-passagedata pid="8" name="StoryAuthor" tags="" position="268,439" size="100,100">brought to you by Kawa#7680</tw-passagedata><tw-passagedata pid="9" name="StorySubtitle" tags="" position="392,432" size="100,100">If this tool doesn&#39;t help, or your needs are more specific, feel free to join us at https://discord.sibr.dev, specifically the &quot;Help Desk&quot; channel, and we can get you where you need to go.</tw-passagedata><tw-passagedata pid="10" name="StoryInit" tags="" position="1225,100" size="100,100">&lt;&lt;set $bot_choice to &quot;null&quot;&gt;&gt; 
+Developer discussion is at @@.channel;#projects@@ in &#39;Getting Involved&#39;.</tw-passagedata><tw-passagedata pid="9" name="StoryAuthor" tags="" position="268,439" size="100,100">brought to you by Kawa#7680</tw-passagedata><tw-passagedata pid="10" name="StorySubtitle" tags="" position="392,432" size="100,100">If this tool doesn&#39;t help, or your needs are more specific, feel free to join us at https://discord.sibr.dev, specifically the &quot;Help Desk&quot; channel, and we can get you where you need to go.</tw-passagedata><tw-passagedata pid="11" name="StoryMenu" tags="" position="100,225" size="100,100">/* &lt;&lt;link &quot;Toggle light/dark mode&quot;&gt;&gt;
+ to do: figure out how to hook this into the JS 
+&lt;&lt;/link&gt;&gt; */</tw-passagedata><tw-passagedata pid="12" name="StoryInit" tags="" position="225,225" size="100,100">&lt;&lt;set $bot_choice to &quot;null&quot;&gt;&gt; 
 &lt;&lt;set $snax_var to &quot;null&quot;&gt;&gt;
-&lt;&lt;set $blasebot_var to &quot;null&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Intro" tags="" position="1100,50" size="100,100">Congratulations on enjoying the cultural event of Blaseball! 
+&lt;&lt;set $blasebot_var to &quot;null&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Intro" tags="" position="1100,50" size="100,100">Congratulations on enjoying the cultural event of Blaseball! 
 
 What are you searching for?
 [[A Discord bot|DiscordBots]]
 [[A web site or graphical interface|WobSites]]
 [[I&#39;m building my own tool or analysis, I need the firehose|NumberCrunchy]]
-[[Something else|Other]]</tw-passagedata><tw-passagedata pid="12" name="DiscordBots" tags="" position="1300, 25" size="100,100">What are you hoping for your bot to do?
+[[Something else|Other]]</tw-passagedata><tw-passagedata pid="14" name="DiscordBots" tags="" position="1300, 25" size="100,100">What are you hoping for your bot to do?
 [[Teach me about concessions|SnaxBot][$snax_var to &quot;snacks&quot;]]
 [[Tell me who to idol|SnaxBot][$snax_var to &quot;idols&quot;]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to &quot;lookup&quot;]]
 [[Tell me what&#39;s happening in my team&#39;s games and remind me of things|Blasebot][$blasebot_var to &quot;alerts&quot;]]
-[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to &quot;CoolEvents&quot;]]</tw-passagedata><tw-passagedata pid="13" name="JoinUsForBots" tags="nobr" position="350,225" size="100,100">/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
+[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to &quot;CoolEvents&quot;]]</tw-passagedata><tw-passagedata pid="15" name="JoinUsForBots" tags="nobr" position="600,225" size="100,100">/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 &lt;&lt;if $snax_var is &quot;snacks&quot;&gt;&gt;
   &lt;&lt;set _automata_channel to &quot;#snax-factory&quot;&gt;&gt;
   &lt;&lt;set _dev_channel to &quot;#snax-bot&quot;&gt;&gt;
@@ -188,7 +192,7 @@ What are you searching for?
   &lt;&lt;set _dev_channel to &quot;#blasebot-project&quot;&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 
-Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.</tw-passagedata><tw-passagedata pid="14" name="WobSites" tags="" position="1300,50" size="100,100">What are you hoping to see?
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.</tw-passagedata><tw-passagedata pid="16" name="WobSites" tags="" position="1300,50" size="100,100">What are you hoping to see?
 
 Current statuses: 
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
@@ -205,30 +209,30 @@ Current and historical data:
 
 Other:
 [[Teach me to imitate a squid|HallMonitor]]
-[[Help me come up with blaseball-y names|Onomancer]]</tw-passagedata><tw-passagedata pid="15" name="NumberCrunchy" tags="" position="1300,75" size="100,100">Welcome to the firehose. What do you want?
+[[Help me come up with blaseball-y names|Onomancer]]</tw-passagedata><tw-passagedata pid="17" name="NumberCrunchy" tags="" position="1300,75" size="100,100">Welcome to the firehose. What do you want?
 
 [[Direct from the tap, fast and somewhat messy|OfficialAPI]]
 [[Seasonal and historical data, in mostly raw form|Chronicler]]
 [[Derived performance data, like batting averages|Datablase]]
-[[Some combo of the above, and by the way I&#39;m using Python|Mike]]</tw-passagedata><tw-passagedata pid="16" name="Other" tags="" position="725,225" size="100,100">What could you be looking for?
+[[Some combo of the above, and by the way I&#39;m using Python|Mike]]</tw-passagedata><tw-passagedata pid="18" name="Other" tags="" position="975,225" size="100,100">What could you be looking for?
 
 [[Have a bot announce blaseball games for me|Jlohn]]
 [[Tell me about this tool|MetaWhich]]
 [[Tell me about these weird faces|BallClarks]]
-[[Tell me about fishery management|Salmon]]</tw-passagedata><tw-passagedata pid="17" name="PlayoffTables" tags="" position="850,225" size="100,100">[[Blaseball Playoff Status|https://mixolyde.net/blaseballstatus/index.html]] breaks down the current season&#39;s status regarding playoff positions and &quot;Party Time&quot; (needs more than 1 Win per game to make the playoffs). It&#39;s brought to you by Mixolyde.
+[[Tell me about fishery management|Salmon]]</tw-passagedata><tw-passagedata pid="19" name="PlayoffTables" tags="" position="1100,225" size="100,100">[[Blaseball Playoff Status|https://mixolyde.net/blaseballstatus/index.html]] breaks down the current season&#39;s status regarding playoff positions and &quot;Party Time&quot; (needs more than 1 Win per game to make the playoffs). It&#39;s brought to you by Mixolyde.
 
-[[Source code here|https://github.com/mixolyde/blaseballstatus]]. Developer discussion is at @@.channel;#projects@@ in &#39;Getting Involved&#39;.</tw-passagedata><tw-passagedata pid="18" name="Reblase" tags="" position="975,225" size="100,100">[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. Brought to you by Astrid.
+[[Source code here|https://github.com/mixolyde/blaseballstatus]]. Developer discussion is at @@.channel;#projects@@ in &#39;Getting Involved&#39;.</tw-passagedata><tw-passagedata pid="20" name="Reblase" tags="" position="1225,225" size="100,100">[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. Brought to you by Astrid.
 
-[[Here&#39;s the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] Talk about development is in @@.channel;#reblase@@ under &#39;Major Projects&#39;.</tw-passagedata><tw-passagedata pid="19" name="SnaxBot" tags="" position="1100,225" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;
+[[Here&#39;s the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] Talk about development is in @@.channel;#reblase@@ under &#39;Major Projects&#39;.</tw-passagedata><tw-passagedata pid="21" name="SnaxBot" tags="" position="100,350" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;
 Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
 
 &lt;&lt;include JoinUsForBots&gt;&gt;
 
 &lt;&lt;if $snax_var is &quot;idols&quot;&gt;&gt;You can also &quot;follow&quot; the @@.channel;#pendant-recommendations@@ channel in your own Discord server. &lt;&lt;/if&gt;&gt;
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="20" name="SnaxSheet" tags="" position="1225,225" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="22" name="SnaxSheet" tags="" position="225,350" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
-Talk about this usually is in @@.channel;#💰-economy@@ under &#39;Research&#39;.</tw-passagedata><tw-passagedata pid="21" name="VibeCheck" tags="" position="100,350" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
+Talk about this usually is in @@.channel;#💰-economy@@ under &#39;Research&#39;.</tw-passagedata><tw-passagedata pid="23" name="VibeCheck" tags="" position="350,350" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
 
 Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
