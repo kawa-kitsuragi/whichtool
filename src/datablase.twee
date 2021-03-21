@@ -16,25 +16,25 @@ You can get support for any of these at @@.channel;#datablase@@ on the SIBR Disc
 
 The two major Github projects that constitute the Datablase are:
 
-Prophesizer (https://github.com/Society-for-Internet-Blaseball-Research/prophesizer)
+[[Prophesizer|https://github.com/Society-for-Internet-Blaseball-Research/prophesizer]]
 C# application that parses raw game updates into game events describing all the pitches that happened during an at-bat (mostly).
 
-Datablase (https://github.com/Society-for-Internet-Blaseball-Research/datablase)
+[[Datablase|https://github.com/Society-for-Internet-Blaseball-Research/datablase]]
 Javascript application that exposes API endpoints for fetching DB information.
 [[blaseball-reference.com|BlaseballReference]] uses these APIs to drive its content.
 
 For more information on any of these, visit the @@.channel;#datablase@@ channel on the SIBR Discord.
 
-[[Back to Datablase|Datablase}}
+[[Back to Datablase|Datablase]]
 
 :: DatablaseApi
 
 Documentation for the Datablase API can be found at https://api.blaseball-reference.com/docs#/
 
-[[Back to Datablase|Datablase}}
+[[Back to Datablase|Datablase]]
 
 :: GuestAccess
 
-Instructions on using guest access to the Datablase to write your own SQL queries using pgAdmin can be found at https://docs.sibr.dev/docs/apis/docs/z-datablase-guest-access.md
+We have a PGadmin setup for writing your own queries! Instructions on guest access are [[here|https://docs.sibr.dev/docs/apis/docs/z-datablase-guest-access.md]].
 
-[[Back to Datablase|Datablase}}
+[[Back to Datablase|Datablase]]

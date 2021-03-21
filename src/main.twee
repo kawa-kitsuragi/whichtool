@@ -35,7 +35,7 @@ Congratulations on enjoying the cultural event of Blaseball!
 What are you searching for?
 [[A Discord bot|DiscordBots]]
 [[A web site or graphical interface|WobSites]]
-[[I'm building my own tool or analysis, I need the firehose|NumberCrunchy]]
+[[I'm building my own tool or analysis, I need raw data in some form|NumberCrunchy]]
 [[Something else|Other]]
 
 :: DiscordBots {"position":"1300, 25"}
@@ -86,9 +86,9 @@ Other:
 [[Help me come up with blaseball-y names|Onomancer]]
 
 :: NumberCrunchy {"position":"1300,75"}
-Welcome to the firehose. What do you want?
+We're happy to serve you data. What do you need?
 
-[[Direct from the tap, fast and somewhat messy|OfficialAPI]]
+[[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]]
 [[Seasonal and historical data, in mostly raw form|Chronicler]]
 [[Derived performance data, like batting averages|Datablase]]
 [[Some combo of the above, and by the way I'm using Python|Mike]]
