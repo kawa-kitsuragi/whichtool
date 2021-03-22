@@ -1,7 +1,6 @@
 :: SnaxBot
 
-<<set $bot_choice to "SnaxBot">>
-Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
+<<set $bot_choice to "SnaxBot">>Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
 
 <<include JoinUsForBots>>
 

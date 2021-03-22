@@ -3,9 +3,7 @@
 <<set $bot_choice to "Blasebot">>
 Blasebot has a bunch of interesting uses in terms of look ups and summaries of games sent directly to your server!
 
-<<if $blasebot_var is "lookup">>
-<<include JoinUsForBots>>
-<<endif>>
+<<if $blasebot_var is "lookup">><<include JoinUsForBots>><<endif>>
 
 Check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
 

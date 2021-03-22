@@ -1,6 +1,6 @@
 :: Datablase
 
-The *Datablase* is our fancy name for a stack of technology that does the following:
+The **Datablase** is our fancy name for a stack of technology that does the following:
 1) Ingest raw data from [[Chronicler]]
 2) Change it from individual-pitch events to per-atbat events
 3) Store it in a PostgreSQL DB

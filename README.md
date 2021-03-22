@@ -27,8 +27,19 @@ If you're comfortable with Twee, you can also edit `main.twee` to lead to a link
 Currently existing tool makers are welcome to edit their own tools' .twee files as well! 
 
 ### An arbitrary style note
-I'm trying to demarcate Discord channel names using the `.channel` style; you can wrap a channel like so:
+Kawa demarcates Discord channel names using the `.channel` style; you can wrap a channel like so:
 ```
 @@.channel;#channel-name-here@@
 ```
 If you have AutoHotKey, you can use the script in this repo - `+ch` will 'autocorrect' to `@@.channel;#@@`, ready to be edited accordingly.
+
+## Local Testing
+Install [Tweego](https://www.motoslave.net/tweego/) then in a command line
+`tweego src -o WhichTool.html`
+and test WhichTool.html in your favorite browser.
+
+YOu can also do 
+`tweego src -o -w WhichTool.html`
+and have the HTML auto-recompile each time you save anything in `src`.
+
+Kawa requests that HTML changes be discarded before push, to not interfere with Github Actions doing the same thing during its build process.
