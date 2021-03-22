@@ -141,9 +141,7 @@ It&#39;s brought to you by shibboh. [[Source code here.|https://github.com/mjhal
 Developer discussion is at @@.channel;#blaseball-reference@@ under &#39;Major Projects&#39;.</tw-passagedata><tw-passagedata pid="3" name="Blasebot" tags="" position="350,100" size="100,100">&lt;&lt;set $bot_choice to &quot;Blasebot&quot;&gt;&gt;
 Blasebot has a bunch of interesting uses in terms of look ups and summaries of games sent directly to your server!
 
-&lt;&lt;if $blasebot_var is &quot;lookup&quot;&gt;&gt;
-&lt;&lt;include JoinUsForBots&gt;&gt;
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $blasebot_var is &quot;lookup&quot;&gt;&gt;&lt;&lt;include JoinUsForBots&gt;&gt;&lt;&lt;endif&gt;&gt;
 
 Check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
 
@@ -159,7 +157,7 @@ Developer discussion is at @@.channel;#projects@@ in &#39;Getting Involved&#39;.
 
 Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;#statistical-significance@@ to see what it&#39;s found. You can also Follow it on your own server for your own alerts!
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]].</tw-passagedata><tw-passagedata pid="7" name="Datablase" tags="" position="850,100" size="100,100">The *Datablase* is our fancy name for a stack of technology that does the following:
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]].</tw-passagedata><tw-passagedata pid="7" name="Datablase" tags="" position="850,100" size="100,100">The **Datablase** is our fancy name for a stack of technology that does the following:
 1) Ingest raw data from [[Chronicler]]
 2) Change it from individual-pitch events to per-atbat events
 3) Store it in a PostgreSQL DB
@@ -208,20 +206,17 @@ What are you searching for?
 [[Tell me what&#39;s happening in my team&#39;s games and remind me of things|Blasebot][$blasebot_var to &quot;alerts&quot;]]
 [[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to &quot;CoolEvents&quot;]]</tw-passagedata><tw-passagedata pid="19" name="JoinUsForBots" tags="nobr" position="1100,225" size="100,100">/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 &lt;&lt;if $snax_var is &quot;snacks&quot;&gt;&gt;
-  &lt;&lt;set _automata_channel to &quot;#snax-factory&quot;&gt;&gt;
-  &lt;&lt;set _dev_channel to &quot;#snax-bot&quot;&gt;&gt;
+  &lt;&lt;set _automata_channel to &quot;snax-factory&quot;&gt;&gt;
+  &lt;&lt;set _dev_channel to &quot;snax-bot&quot;&gt;&gt;
 &lt;&lt;elseif $snax_var is &quot;idols&quot;&gt;&gt;
-  &lt;&lt;set _automata_channel to &quot;#pendant-recommendations&quot;&gt;&gt;
-  &lt;&lt;set _dev_channel to &quot;$pendant-rec-bot&quot;&gt;&gt;
-&lt;&lt;elseif $bot_choice is &quot;Yuuko&quot;&gt;&gt;
-  &lt;&lt;set _automata_channel to &quot;#bot-crimes&quot;&gt;&gt;
-  &lt;&lt;set _dev_channel to &quot;#crisp&quot;&gt;&gt;
+  &lt;&lt;set _automata_channel to &quot;pendant-recommendations&quot;&gt;&gt;
+  &lt;&lt;set _dev_channel to &quot;pendant-rec-bot&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt; /* blasebot */
-  &lt;&lt;set _automata_channel to &quot;#blasebot-usage&quot;&gt;&gt;
-  &lt;&lt;set _dev_channel to &quot;#blasebot-project&quot;&gt;&gt;
+  &lt;&lt;set _automata_channel to &quot;blasebot-usage&quot;&gt;&gt;
+  &lt;&lt;set _dev_channel to &quot;blasebot-project&quot;&gt;&gt;
 &lt;&lt;endif&gt;&gt;
 
-Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;_automata_channel@@ to use the bot. Development questions and bug reports can be brought up in @@.channel;_dev_channel@@ in Major Projects.</tw-passagedata><tw-passagedata pid="20" name="WobSites" tags="" position="1300,50" size="100,100">What are you hoping to see?
+Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;#_automata_channel@@ in &#39;Automata&#39; to use the bot. Development questions and bug reports can be brought up in @@.channel;#_dev_channel@@ in Major Projects.</tw-passagedata><tw-passagedata pid="20" name="WobSites" tags="" position="1300,50" size="100,100">What are you hoping to see?
 
 Current statuses:
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
@@ -272,8 +267,7 @@ you can find us at @@.channel;#crisp@@ under &#39;Salmon&#39;.
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[I want to use python to run salmon simulations|salmon_lib]]
 [[I want to use an API to run salmon simulations|webcrisp]]</tw-passagedata><tw-passagedata pid="29" name="SteveWriteup" tags="" position="1100,350" size="100,100">There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
-[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]</tw-passagedata><tw-passagedata pid="30" name="salmon_lib" tags="" position="1225,350" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="31" name="webcrisp" tags="" position="100,475" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="32" name="SnaxBot" tags="" position="225,475" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;
-Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
+[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]</tw-passagedata><tw-passagedata pid="30" name="salmon_lib" tags="" position="1225,350" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="31" name="webcrisp" tags="" position="100,475" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="32" name="SnaxBot" tags="" position="225,475" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
 
 &lt;&lt;include JoinUsForBots&gt;&gt;
 
@@ -286,8 +280,7 @@ Talk about this usually is in @@.channel;#💰-economy@@ under &#39;Research&#39
 Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="35" name="Yuuko" tags="" position="600,475" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
 Well, uh, now you can.
 
-&lt;&lt;set $bot_choice to &quot;Yuuko&quot;&gt;&gt;
-&lt;&lt;include JoinUsForBots&gt;&gt;
+/* Turns out the guidelines are somewhat different for our fishy friend.*/ Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;#bot-crimes@@ in &#39;Salmon&#39; to use the bot. Development questions and bug reports can be brought up in @@.channel;#crisp@@, also in &#39;Salmon&#39;.
 
 Yuuko is made by allie (sapphicfettucine/alisww), using the CRiSP Harvest Model and salmon_lib. [[Find the source code here|https://github.com/alisww/yuuko]].</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
