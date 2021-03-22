@@ -1,0 +1,7 @@
+:: Onomancer
+
+[[Onomancer|https://onomancer.sibr.dev]] collects potential blaseball names, generates apple stats (and derived stars etc) for those names, and lets you rate them and collect them into custom teams. It's brought to you by ch00beh.
+
+It includes an API for using these names in your own projects. 
+
+Source code [[here|https://github.com/jmaliksi/onomancer]]. Discussion at @@.channel;#ch00behs-cursed-projects@@ in 'Major Projects'.
