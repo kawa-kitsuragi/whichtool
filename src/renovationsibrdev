@@ -1,0 +1,7 @@
+:: renovations.sibr.dev
+
+[[Renovations.SIBR.dev|https://renovations.sibr.dev/]] is a web visualizer to show all current and past know stadium renovation modifications, as well as to show current ballpark stats, without needing to flute between teams or purchase a pizza concession. It's brought to you by Dlareau.
+
+All known renovations across all teams are shown at the top, and you can hover over a renovation or a ballpark stat (once expanded) to see what it does. These expanded ballpark stats are mild FK potentially, as the current Blaseball.com website does not display specific values for these visually.
+
+Discussion of this project happens at @@.channel;#sibr-dot-dev@@ under 'Major Projects'.
