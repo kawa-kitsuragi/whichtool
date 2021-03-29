@@ -25,9 +25,10 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 }
 
 :: StoryInit
-<<set $bot_choice to "null">>
-<<set $snax_var to "null">>
-<<set $blasebot_var to "null">>
+<<set $bot_choice to null>>
+<<set $snax_var to null>>
+<<set $blasebot_var to null>>
+<<set $discussion_channel to "Projects">>
 
 :: Intro {"position":"1100,50","size":"100,100"}
 Congratulations on enjoying the cultural event of Blaseball!
@@ -49,18 +50,48 @@ What are you hoping for your bot to do?
 
 :: JoinUsForBots [nobr]
 /* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
+
+<<set _automata_category to "🤖 Automata">>
+
 <<if $snax_var is "snacks">>
   <<set _automata_channel to "snax-factory">>
-  <<set _dev_channel to "snax-bot">>
+  <<set $discussion_channel to "snax-bot">>
 <<elseif $snax_var is "idols">>
   <<set _automata_channel to "pendant-recommendations">>
-  <<set _dev_channel to "pendant-rec-bot">>
-<<else>> /* blasebot */
+  <<set $discussion_channel to "pendant-rec-bot">>
+<<elseif $blasebot_var isnot null>>
   <<set _automata_channel to "blasebot-usage">>
-  <<set _dev_channel to "blasebot-project">>
-<<endif>>
+  <<set $discussion_channel to "blasebot-project">>
+<<elseif $bot_choice is "CoolEvents">>
+  <<set _automata_channel to "statistical-significance">>
+<<elseif $bot_choice is "Yuuko">> /* salmon */
+  <<set _automata_channel to "bot-crimes">>
+  <<set $discussion_channel to "crisp">>
+  <<set _automata_category to "🐟 Salmon">>
+<</if>>
 
-Visit us [[on the server|https://discord.sibr.dev]], pick out a role in @@.channel;#roles-and-sigils@@, then head to @@.channel;#_automata_channel@@ in 'Automata' to use the bot. Development questions and bug reports can be brought up in @@.channel;#_dev_channel@@ in Major Projects.
+To use the bot:
+
+# Visit us [[on the server|https://discord.sibr.dev]]
+# Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
+# Go to @@.channel;#_automata_channel@@ in 'Automata' to use the bot. 
+
+<<include WhereToDiscuss>>
+
+:: WhereToDiscuss
+/* If you don't have a 'set' macro, this'll default to the general projects channel.*/
+
+<<if $discussion_channel is "crisp">>
+  <<set _discussion_category to "🐟 Salmon">>
+<<elseif $discussion_channel isnot "projects">>
+  <<set _discussion_category to "💼 Major Projects">>
+<<else>>
+  <<set _discussion_category to "🙌 Getting Involved">>
+<</if>>
+
+Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. <<if _discussion_category isnot "🙌 Getting Involved">>You'll need the '_discussion_category' role in @@.channel;#roles-and-sigils@@ to see this channel.<</if>>
+
+/* This particular passage is shared to make boilerplate about where to discuss articles. */
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
@@ -71,21 +102,21 @@ Current statuses:
 [[Vibes over the course of the current season|VibeCheck]]
 [[Comparing teams to each other this season|Chartographer]]
 [[How many games to the playoffs/party time|PlayoffTables]]
-[[Watch games in a visual way, including on my mobile devices|BlasesLoaded]]
+[[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to "blases-loaded"]]
 
 Current and historical data:
 [[Past game logs and schedules|Reblase]]
 [[Win/Loss in this season and past ones|ChartParty]]
-[[Schedules and derived performance like batting averages|BlaseballReference]]
+[[Schedules and derived performance like batting averages|BlaseballReference][$discussion_channel to "blaseball-reference"]]
 [[Team star averages over time|Notebooks]]
 [[Player stars changing over time|Hloroscopes]]
 [[Break down individual games into inning-based line scores|LineScore]]
-[[Break down individual games for each player's actions|Tome]]
+[[Break down individual games for each player's actions|Tome][$discussion_channel to "ch00bs-cursed-projects"]]
 [[Currently available and past options for stadium renovations|Renovations]]
 
 Other:
 [[Teach me to imitate a squid|HallMonitor]]
-[[Help me come up with blaseball-y names and assign blaseball attributes to original names|Onomancer]]
+[[Help me come up with blaseball-y names and assign blaseball attributes to original names|Onomancer][$discussion_channel to "ch00bs-cursed-projects"]]
 [[Information about past 'Inside a Blaseball' streams|IAB]]
 [[Things to keep in mind when building my own tools or analyses|Falsehoods]]
 
@@ -100,7 +131,7 @@ We're happy to serve you data. What do you need?
 :: Other
 What could you be looking for?
 
-[[Have a bot announce blaseball games for me|Jlohn]]
+[[Have a bot announce blaseball games for me|Jlohn][$discussion_channel to "ch00bs-cursed-projects"]]
 [[Tell me about this tool|MetaWhich]]
 [[Tell me about fishery management|Salmon]]
 [[User styles for enhancing my blaseball browser experience|UserStyles]]

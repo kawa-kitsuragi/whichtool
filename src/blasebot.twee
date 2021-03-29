@@ -3,12 +3,13 @@
 <<set $bot_choice to "Blasebot">>
 Blasebot has a bunch of interesting uses in terms of look ups and summaries of games sent directly to your server!
 
-<<if $blasebot_var is "lookup">><<include JoinUsForBots>><<endif>>
+<<if $blasebot_var is "lookup">><<include JoinUsForBots>><</if>>
 
 Check out the [[source code|https://github.com/BeeFox-sys/blasebot]].
 
 <<if $blasebot_var is "alerts">>
-You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. Bring development questions and bug reports to @@.channel;#blasebot-project@@ in Major Projects.
-<<endif>>
+You'll find an invite link to the bot in the readme above, which you can use to get the bot set up in your own server. 
+<<include WhereToDiscuss>>
+<</if>>
 
 If you'd like, you can also support Fox's efforts directly through stars' [[Patreon|https://www.patreon.com/beefox]].
