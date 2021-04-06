@@ -230,7 +230,7 @@ Source code [[here|https://github.com/society-for-internet-blaseball-research/li
 &lt;&lt;/link&gt;&gt; */</tw-passagedata><tw-passagedata pid="22" name="StoryInit" tags="" position="225,350" size="100,100">&lt;&lt;set $bot_choice to null&gt;&gt;
 &lt;&lt;set $snax_var to null&gt;&gt;
 &lt;&lt;set $blasebot_var to null&gt;&gt;
-&lt;&lt;set $discussion_channel to &quot;Projects&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Intro" tags="" position="1100,50" size="100,100">Congratulations on enjoying the cultural event of Blaseball!
+&lt;&lt;set $discussion_channel to &quot;📽-Projects&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Intro" tags="" position="1100,50" size="100,100">Congratulations on enjoying the cultural event of Blaseball!
 
 What are you searching for?
 [[A Discord bot|DiscordBots]]
@@ -273,7 +273,7 @@ To use the bot:
 
 &lt;&lt;if $discussion_channel is &quot;crisp&quot;&gt;&gt;
   &lt;&lt;set _discussion_category to &quot;🐟 Salmon&quot;&gt;&gt;
-&lt;&lt;elseif $discussion_channel isnot &quot;projects&quot;&gt;&gt;
+&lt;&lt;elseif $discussion_channel isnot &quot;📽-Projects&quot;&gt;&gt;
   &lt;&lt;set _discussion_category to &quot;💼 Major Projects&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
   &lt;&lt;set _discussion_category to &quot;🙌 Getting Involved&quot;&gt;&gt;
@@ -287,8 +287,8 @@ Current statuses:
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
 [[Player stats right now|Abslve]]
 [[Vibes over the course of the current season|VibeCheck]]
-[[Comparing teams to each other this season|Chartographer]]
-[[How many games to the playoffs/party time|PlayoffTables]]
+[[Comparing teams to each other this season|Chartographer][$discussion_channel to &quot;📽-Projects&quot;]]
+[[How many games to the playoffs/party time|PlayoffTables][$discussion_channel to &quot;📽-Projects&quot;]]
 [[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to &quot;blases-loaded&quot;]]
 
 Current and historical data:
@@ -296,10 +296,11 @@ Current and historical data:
 [[Win/Loss in this season and past ones|ChartParty]]
 [[Schedules and derived performance like batting averages|BlaseballReference][$discussion_channel to &quot;blaseball-reference&quot;]]
 [[Team star averages over time|Notebooks]]
-[[Player stars changing over time|Hloroscopes]]
+[[Player stars changing over time|Hloroscopes][$discussion_channel to &quot;📽-Projects&quot;]]
 [[Break down individual games into inning-based line scores|LineScore]]
 [[Break down individual games for each player&#39;s actions|Tome][$discussion_channel to &quot;ch00bs-cursed-projects&quot;]]
 [[Currently available and past options for stadium renovations|Renovations]]
+[[Show me how the salmon are running|SalmonScoreboard][$discussion_channel to &quot;📽-Projects&quot;]]
 
 Other:
 [[Teach me to imitate a squid|HallMonitor]]
@@ -359,25 +360,29 @@ you can find us at @@.channel;#crisp@@ under &#39;🐟 Salmon&#39;, and you&#39;
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[I want to use python to run salmon simulations|salmon_lib]]
 [[I want to use an API to run salmon simulations|webcrisp]]</tw-passagedata><tw-passagedata pid="39" name="SteveWriteup" tags="" position="1100,475" size="100,100">There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
-[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]</tw-passagedata><tw-passagedata pid="40" name="salmon_lib" tags="" position="1225,475" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="41" name="webcrisp" tags="" position="100,600" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="42" name="SnaxBot" tags="" position="225,600" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
+[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]</tw-passagedata><tw-passagedata pid="40" name="salmon_lib" tags="" position="1225,475" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="41" name="webcrisp" tags="" position="100,600" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="42" name="SalmonScoreboard" tags="" position="225,600" size="100,100">Salmon, under Salmon Weather (as of Season 15), steal runs by swimming upstream. [[This page|https://hora.github.io/blaseball-scoreboard/]] shows every game the salmon were in, and how many runs they took, as if they were a third team on the field. A white triangle indicates the ILB winner of the game; a pink triangle notes that the salmon had more Runs than at least one ILB team.
+
+Brought to you by Dawn T.
+
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SnaxBot" tags="" position="350,600" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
 
 &lt;&lt;include JoinUsForBots&gt;&gt;
 
 &lt;&lt;if $snax_var is &quot;idols&quot;&gt;&gt;You can also &quot;follow&quot; the @@.channel;#pendant-recommendations@@ channel in your own Discord server. &lt;&lt;/if&gt;&gt;
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="43" name="SnaxSheet" tags="" position="350,600" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="44" name="SnaxSheet" tags="" position="475,600" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
-Talk about this usually is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="44" name="Tome" tags="" position="475,600" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
+Talk about this usually is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="45" name="Tome" tags="" position="600,600" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
 
 Source code [[here|https://github.com/Society-for-Internet-Blaseball-Research/tome]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="UserStyles" tags="" position="600,600" size="100,100">[[Blaseball Compact|https://thevdude.github.io/BlaseballCompact/]] is a Stylus userstyle to fit blaseball games during the regular season in a 3 x 4 grid. It&#39;s brought to you by theVdude.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="UserStyles" tags="" position="725,600" size="100,100">[[Blaseball Compact|https://thevdude.github.io/BlaseballCompact/]] is a Stylus userstyle to fit blaseball games during the regular season in a 3 x 4 grid. It&#39;s brought to you by theVdude.
 
 [[Emoji fix|https://holmesmr.github.io/Blaseball-Userstyles/]] is another Stylus userstyle to fix the emoji of the Spies, Fridays, and Mechs, and un-ORBs the Talkers. It&#39;s brought to you by Cepheus. Note that the &#39;BIG SCREEN BLASEBALL&#39; style on this page is a prereq to Compact, but was not updated to fit the 2 extra games per day that were started in Season 13.
 
-[[Blaseball+|https://addons.mozilla.org/en-US/firefox/addon/blaseball-plus/]] adds functionality such as [[Reblase]] and [[Abslve]] links for Firefox. It&#39;s brought to you by leo60228.</tw-passagedata><tw-passagedata pid="46" name="VibeCheck" tags="" position="725,600" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
+[[Blaseball+|https://addons.mozilla.org/en-US/firefox/addon/blaseball-plus/]] adds functionality such as [[Reblase]] and [[Abslve]] links for Firefox. It&#39;s brought to you by leo60228.</tw-passagedata><tw-passagedata pid="47" name="VibeCheck" tags="" position="850,600" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
 
-Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="47" name="Yuuko" tags="" position="850,600" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
+Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="48" name="Yuuko" tags="" position="975,600" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
 Well, uh, now you can.
 
 &lt;&lt;set $bot_choice to &quot;Yuuko&quot;&gt;&gt;
