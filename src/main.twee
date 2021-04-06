@@ -28,7 +28,7 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 <<set $bot_choice to null>>
 <<set $snax_var to null>>
 <<set $blasebot_var to null>>
-<<set $discussion_channel to "Projects">>
+<<set $discussion_channel to "📽-Projects">>
 
 :: Intro {"position":"1100,50","size":"100,100"}
 Congratulations on enjoying the cultural event of Blaseball!
@@ -83,7 +83,7 @@ To use the bot:
 
 <<if $discussion_channel is "crisp">>
   <<set _discussion_category to "🐟 Salmon">>
-<<elseif $discussion_channel isnot "projects">>
+<<elseif $discussion_channel isnot "📽-Projects">>
   <<set _discussion_category to "💼 Major Projects">>
 <<else>>
   <<set _discussion_category to "🙌 Getting Involved">>
@@ -100,8 +100,8 @@ Current statuses:
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
 [[Player stats right now|Abslve]]
 [[Vibes over the course of the current season|VibeCheck]]
-[[Comparing teams to each other this season|Chartographer]]
-[[How many games to the playoffs/party time|PlayoffTables]]
+[[Comparing teams to each other this season|Chartographer][$discussion_channel to "📽-Projects"]]
+[[How many games to the playoffs/party time|PlayoffTables][$discussion_channel to "📽-Projects"]]
 [[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to "blases-loaded"]]
 
 Current and historical data:
@@ -109,10 +109,11 @@ Current and historical data:
 [[Win/Loss in this season and past ones|ChartParty]]
 [[Schedules and derived performance like batting averages|BlaseballReference][$discussion_channel to "blaseball-reference"]]
 [[Team star averages over time|Notebooks]]
-[[Player stars changing over time|Hloroscopes]]
+[[Player stars changing over time|Hloroscopes][$discussion_channel to "📽-Projects"]]
 [[Break down individual games into inning-based line scores|LineScore]]
 [[Break down individual games for each player's actions|Tome][$discussion_channel to "ch00bs-cursed-projects"]]
 [[Currently available and past options for stadium renovations|Renovations]]
+[[Show me how the salmon are running|SalmonScoreboard][$discussion_channel to "📽-Projects"]]
 
 Other:
 [[Teach me to imitate a squid|HallMonitor]]
