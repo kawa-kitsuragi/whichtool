@@ -49,7 +49,7 @@ What are you hoping for your bot to do?
 [[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
 
 :: JoinUsForBots [nobr]
-/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
+<<silently>>/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 
 <<set _automata_category to "🤖 Automata">>
 
@@ -68,7 +68,7 @@ What are you hoping for your bot to do?
   <<set _automata_channel to "bot-crimes">>
   <<set $discussion_channel to "crisp">>
   <<set _automata_category to "🐟 Salmon">>
-<</if>>
+<</if>><</silently>>
 
 To use the bot:
 
@@ -79,7 +79,9 @@ To use the bot:
 <<include WhereToDiscuss>>
 
 :: WhereToDiscuss
-/* If you don't have a 'set' macro, this'll default to the general projects channel.*/
+<<silently>>
+/* This particular passage is shared to make boilerplate about where to discuss articles. */
+/* If you don't have a 'set' macro, this *should* default to the general projects channel, but it might not quite be working.*/
 
 <<if $discussion_channel is "crisp">>
   <<set _discussion_category to "🐟 Salmon">>
@@ -87,11 +89,11 @@ To use the bot:
   <<set _discussion_category to "💼 Major Projects">>
 <<else>>
   <<set _discussion_category to "🙌 Getting Involved">>
-<</if>>
+<</if>><</silently>>
 
 Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. <<if _discussion_category isnot "🙌 Getting Involved">>You'll need the '_discussion_category' role in @@.channel;#roles-and-sigils@@ to see this channel.<</if>>
 
-/* This particular passage is shared to make boilerplate about where to discuss articles. */
+
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
@@ -114,6 +116,7 @@ Current and historical data:
 [[Break down individual games for each player's actions|Tome][$discussion_channel to "ch00bs-cursed-projects"]]
 [[Currently available and past options for stadium renovations|Renovations]]
 [[Show me how the salmon are running|SalmonScoreboard][$discussion_channel to "📽-Projects"]]
+[[Keep track of sick skateboarding moves|GrindRail][$discussion_channel to "📽-Projects"]]
 
 Other:
 [[Teach me to imitate a squid|HallMonitor]]
