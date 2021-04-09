@@ -32,6 +32,7 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GH_PAT }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./dist
+          cname: whichtool.sibr.dev
 
       - name: Commit html file to master
         run: |
