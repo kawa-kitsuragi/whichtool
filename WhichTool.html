@@ -242,7 +242,7 @@ What are you searching for?
 [[I&#39;m building my own tool or analysis, I need raw data in some form|NumberCrunchy]]
 [[Something else|Other]]</tw-passagedata><tw-passagedata pid="25" name="DiscordBots" tags="" position="1300, 25" size="100,100">What are you hoping for your bot to do?
 [[Teach me about concessions|SnaxBot][$snax_var to &quot;snacks&quot;]]
-[[Tell me who to idol|SnaxBot][$snax_var to &quot;idols&quot;]]
+[[Tell me who to idol and possible upset bets|SnaxBot][$snax_var to &quot;idols&quot;]]
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to &quot;lookup&quot;]]
 [[Tell me what&#39;s happening in my team&#39;s games and remind me of things|Blasebot][$blasebot_var to &quot;alerts&quot;]]
@@ -255,7 +255,7 @@ What are you searching for?
   &lt;&lt;set $discussion_channel to &quot;snax-bot&quot;&gt;&gt;
 &lt;&lt;elseif $snax_var is &quot;idols&quot;&gt;&gt;
   &lt;&lt;set _automata_channel to &quot;pendant-recommendations&quot;&gt;&gt;
-  &lt;&lt;set $discussion_channel to &quot;pendant-rec-bot&quot;&gt;&gt;
+  &lt;&lt;set $discussion_channel to &quot;game-sim-sim-bot-aka-metasim-v2&quot;&gt;&gt;
 &lt;&lt;elseif $blasebot_var isnot null&gt;&gt;
   &lt;&lt;set _automata_channel to &quot;blasebot-usage&quot;&gt;&gt;
   &lt;&lt;set $discussion_channel to &quot;blasebot-project&quot;&gt;&gt;
@@ -273,7 +273,7 @@ To use the bot:
 # Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
 # Go to @@.channel;#_automata_channel@@ in &#39;Automata&#39; to use the bot. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="WhereToDiscuss" tags="" position="850,350" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="WhereToDiscuss" tags="nobr" position="850,350" size="100,100">&lt;&lt;silently&gt;&gt;
 /* This particular passage is shared to make boilerplate about where to discuss articles. */
 /* If you don&#39;t have a &#39;set&#39; macro, this *should* default to the general projects channel, but it might not quite be working.*/
 
@@ -369,13 +369,13 @@ you can find us at @@.channel;#crisp@@ under &#39;🐟 Salmon&#39;, and you&#39;
 
 Brought to you by Dawn T.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="SnaxBot" tags="" position="475,600" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Food Court Jester can help you pick out snacks and idols! The Jester is primarily written by tehstone; idol analysis by kjc9 and snack analysis by nago.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="SnaxBot" tags="" position="475,600" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Food Court Jester can help you pick out snacks and idols, and tell you which games might beat the stated odds on-site! The Jester is primarily written by tehstone; idol/upset analysis by kjc9 and snack analysis by nago 🦀.
 
 &lt;&lt;include JoinUsForBots&gt;&gt;
 
 &lt;&lt;if $snax_var is &quot;idols&quot;&gt;&gt;You can also &quot;follow&quot; the @@.channel;#pendant-recommendations@@ channel in your own Discord server. &lt;&lt;/if&gt;&gt;
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="45" name="SnaxSheet" tags="" position="600,600" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]], [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]], [[or for the simulator working on idols and upsets|https://github.com/kjc9/blaseballgamesim]].</tw-passagedata><tw-passagedata pid="45" name="SnaxSheet" tags="" position="600,600" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
 Talk about this usually is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="46" name="Tome" tags="" position="725,600" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
 
