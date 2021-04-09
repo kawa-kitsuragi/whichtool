@@ -48,7 +48,7 @@ What are you hoping for your bot to do?
 [[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
 [[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
 
-:: JoinUsForBots [nobr]
+:: JoinUsForBots 
 <<silently>>/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 
 <<set _automata_category to "🤖 Automata">>
@@ -68,9 +68,9 @@ What are you hoping for your bot to do?
   <<set _automata_channel to "bot-crimes">>
   <<set $discussion_channel to "crisp">>
   <<set _automata_category to "🐟 Salmon">>
-<</if>><</silently>>
+<</if>>
 
-To use the bot:
+<</silently>>To use the bot:
 
 # Visit us [[on the server|https://discord.sibr.dev]]
 # Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
