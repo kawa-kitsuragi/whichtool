@@ -42,7 +42,7 @@ What are you searching for?
 :: DiscordBots {"position":"1300, 25"}
 What are you hoping for your bot to do?
 [[Teach me about concessions|SnaxBot][$snax_var to "snacks"]]
-[[Tell me who to idol|SnaxBot][$snax_var to "idols"]]
+[[Tell me who to idol and possible upset bets|SnaxBot][$snax_var to "idols"]]
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
 [[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
@@ -58,7 +58,7 @@ What are you hoping for your bot to do?
   <<set $discussion_channel to "snax-bot">>
 <<elseif $snax_var is "idols">>
   <<set _automata_channel to "pendant-recommendations">>
-  <<set $discussion_channel to "pendant-rec-bot">>
+  <<set $discussion_channel to "game-sim-sim-bot-aka-metasim-v2">>
 <<elseif $blasebot_var isnot null>>
   <<set _automata_channel to "blasebot-usage">>
   <<set $discussion_channel to "blasebot-project">>
@@ -78,7 +78,7 @@ To use the bot:
 
 <<include WhereToDiscuss>>
 
-:: WhereToDiscuss
+:: WhereToDiscuss [nobr]
 <<silently>>
 /* This particular passage is shared to make boilerplate about where to discuss articles. */
 /* If you don't have a 'set' macro, this *should* default to the general projects channel, but it might not quite be working.*/
@@ -92,8 +92,6 @@ To use the bot:
 <</if>><</silently>>
 
 Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. <<if _discussion_category isnot "🙌 Getting Involved">>You'll need the '_discussion_category' role in @@.channel;#roles-and-sigils@@ to see this channel.<</if>>
-
-
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
