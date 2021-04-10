@@ -27,12 +27,13 @@ jobs:
           tweego src -o WhichTool.html
 
       - name: Deploy to Pages
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         env:
           PERSONAL_TOKEN: ${{ secrets.GH_PAT }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./dist
           cname: whichtool.sibr.dev
+          keep_files: true
 
       - name: Commit html file to master
         run: |
