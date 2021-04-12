@@ -1,0 +1,11 @@
+:: Eventually
+
+<<set $discussion_channel to "projects">>
+
+Eventually is a small search engine API for the blaseball feed, allowing you to search through it with as much or as little specificity as you want.
+Want to find every interaction between NaN and Forrest Best? [[Yep, you can do it!|https://api.sibr.dev/eventually/events?playerNames=Forrest%20Best_NaN]]
+
+You can find API documentation [[here|https://allie-signet.stoplight.io/docs/eventually/reference/eventually-api.v1.yaml]], or use the [[blaseball_mike wrapper for python|Mike]].
+It's made by allie (sapphicfettucine#6248), and you can find the source code on [[this github repo|https://github.com/alisww/eventually]]
+
+<<include WhereToDiscuss>>

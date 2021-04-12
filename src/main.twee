@@ -48,7 +48,7 @@ What are you hoping for your bot to do?
 [[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
 [[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
 
-:: JoinUsForBots 
+:: JoinUsForBots
 <<silently>>/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 
 <<set _automata_category to "🤖 Automata">>
@@ -74,7 +74,7 @@ What are you hoping for your bot to do?
 
 # Visit us [[on the server|https://discord.sibr.dev]]
 # Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
-# Go to @@.channel;#_automata_channel@@ in 'Automata' to use the bot. 
+# Go to @@.channel;#_automata_channel@@ in 'Automata' to use the bot.
 
 <<include WhereToDiscuss>>
 
@@ -128,6 +128,7 @@ We're happy to serve you data. What do you need?
 [[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]]
 [[Seasonal and historical data, in mostly raw form|Chronicler]]
 [[Derived performance data, like batting averages|Datablase]]
+[[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
 [[Some combo of the above, and by the way I'm using Python|Mike]]
 
 :: Other
