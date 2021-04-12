@@ -5,6 +5,7 @@ on:
     paths:
       - '**.twee'
       - 'src/**'
+      - '.github/workflows/**'
     branches:
       - main
 
