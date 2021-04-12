@@ -34,7 +34,7 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./dist
           keep_files: true
-          CNAME: whichtool.sibr.dev
+          cname: whichtool.sibr.dev
 
       - name: Commit html file to master
         run: |
