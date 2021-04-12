@@ -6,6 +6,6 @@ Chronicler brings together game events and other data from the [[official API|Of
 
 API documentation [[here|https://astrid.stoplight.io/docs/sibr/reference/Chronicler.v1.yaml]]. Like for the official API, you can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that's a better format for you than JSON.
 
-There will always be some delay between updates on the official API and Chronicler. If you need events in an at-bat as opposed to per-pitch format, you're better off using [[Datablase]]. If you'd like to use Python, [[there's a wrapper available|Mike]].
+There will always be some delay between updates on the official API and Chronicler. If you need events in an at-bat as opposed to per-pitch format, you're better off using [[Datablase]]. If you'd like to use Python, [[there's a wrapper available|Mike]]. If you'd like more robust search of the S12-onwards Feed, you're probably better off using [[Eventually]].
 
 <<include WhereToDiscuss>>
