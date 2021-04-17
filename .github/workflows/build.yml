@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v3
         env:
-          PERSONAL_TOKEN: ${{ secrets.GH_PAT }}
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./dist
           keep_files: true
@@ -46,4 +46,4 @@ jobs:
       - name: Push html file to master
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GH_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
