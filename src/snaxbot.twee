@@ -1,6 +1,6 @@
 :: SnaxBot
 
-<<set $bot_choice to "SnaxBot">>Our friendly local Food Court Jester can help you pick out snacks and idols, and tell you which games might beat the stated odds on-site! The Jester is primarily written by tehstone; idol/upset analysis by kjc9 and snack analysis by nago 🦀.
+<<set $bot_choice to "SnaxBot">>Our friendly local Purveyor of Crates and Glitters can help you pick out snacks and idols, and tell you which games might beat the stated odds on-site! The Jester is primarily written by tehstone; idol/upset analysis by kjc9 and snack analysis by nago 🦀.
 
 <<include JoinUsForBots>>
 
