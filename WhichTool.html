@@ -100,10 +100,11 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F79B1E6A-7782-4099-B834-867C0F5CA858// --><tw-storydata name="WhichTool" startnode="27" creator="Tweego" creator-version="2.1.1" ifid="F79B1E6A-7782-4099-B834-867C0F5CA858" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+	<!-- UUID://F79B1E6A-7782-4099-B834-867C0F5CA858// --><tw-storydata name="WhichTool" startnode="28" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F79B1E6A-7782-4099-B834-867C0F5CA858" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap')
 
-html {
+html 
+{
   height: 100%;
 }
 
@@ -112,6 +113,12 @@ body, tw-story
   font-family: 'Lora', serif;
   margin-left: 2em;
   height: 100%;
+}
+
+body.lightmode 
+{
+  background-color: whitesmoke;
+  color: black;
 }
 
 /* not actually implemented yet - the JS doesn't hook to anything */
@@ -125,10 +132,29 @@ body, tw-story
   white-space: 'pre-line'
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">function lightMode() {
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "light-mode.js" */
+function lightMode() {
   var element = document.body;
   element.classList.toggle("light-mode");
-}</script><tw-passagedata pid="1" name="Abslve" tags="" position="100,100" size="100,100">[[Abslve|https://slavfox.space/abslve/#SUN]] shows you star ratings for any player, by team. 
+}
+/* twine-user-script #2: "Lightmode" */
+setup.lightmodeFunc = function() {if (settings.lightmode) { // is true
+		$("body").addClass("lightmode"); 
+    // If you want more HTML elements to change, add the class to them too
+	}
+	else { // is false
+		$("body").removeClass("lightmode");
+	}
+}
+/* twine-user-script #3: "Story JavaScript" */
+// Setting up a toggle control for the settings property 'lightmode' w/ callbacks
+Setting.addHeader("Settings");
+Setting.addToggle("lightmode", {
+  label: "Lightmode",
+  desc: "Change the display of whichtool for lighter colours",
+  default  : false,
+	onChange : setup.lightmodeFunc
+  });</script><tw-passagedata pid="1" name="Abslve" tags="" position="100,100" size="100,100">[[Abslve|https://slavfox.space/abslve/#SUN]] shows you star ratings for any player, by team. 
 
 You can click the &quot;Want that Forbidden Knowledge?&quot; link at the bottom for unrounded stars and &quot;apple stats&quot;, such as ruthlessness and shakesperianism. From there, you can click that &quot;most Forbidden Knowledge&quot; link to also see these stats for players in the Shadows.
 
@@ -253,19 +279,20 @@ Source code [[here|https://github.com/society-for-internet-blaseball-research/li
 &lt;&lt;/link&gt;&gt; */</tw-passagedata><tw-passagedata pid="26" name="StoryInit" tags="" position="725,350" size="100,100">&lt;&lt;set $bot_choice to null&gt;&gt;
 &lt;&lt;set $snax_var to null&gt;&gt;
 &lt;&lt;set $blasebot_var to null&gt;&gt;
-&lt;&lt;set $discussion_channel to &quot;📽-Projects&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Intro" tags="" position="1100,50" size="100,100">Congratulations on enjoying the cultural event of Blaseball!
+&lt;&lt;set $discussion_channel to &quot;📽-Projects&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="PassageReady" tags="" position="850,350" size="100,100">/* We seem to need to re-run the CSS change whenever the passage reload */
+&lt;&lt;= setup.lightmodeFunc()&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Intro" tags="" position="1100,50" size="100,100">Congratulations on enjoying the cultural event of Blaseball!
 
 What are you searching for?
 [[A Discord bot|DiscordBots]]
 [[A web site or graphical interface|WobSites]]
 [[I&#39;m building my own tool or analysis, I need raw data in some form|NumberCrunchy]]
-[[Something else|Other]]</tw-passagedata><tw-passagedata pid="28" name="DiscordBots" tags="" position="1300, 25" size="100,100">What are you hoping for your bot to do?
+[[Something else|Other]]</tw-passagedata><tw-passagedata pid="29" name="DiscordBots" tags="" position="1300, 25" size="100,100">What are you hoping for your bot to do?
 [[Teach me about concessions|SnaxBot][$snax_var to &quot;snacks&quot;]]
 [[Tell me who to idol and possible upset bets|SnaxBot][$snax_var to &quot;idols&quot;]]
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to &quot;lookup&quot;]]
 [[Tell me what&#39;s happening in my team&#39;s games and remind me of things|Blasebot][$blasebot_var to &quot;alerts&quot;]]
-[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to &quot;CoolEvents&quot;]]</tw-passagedata><tw-passagedata pid="29" name="JoinUsForBots" tags="" position="1100,350" size="100,100">&lt;&lt;silently&gt;&gt;/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
+[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to &quot;CoolEvents&quot;]]</tw-passagedata><tw-passagedata pid="30" name="JoinUsForBots" tags="" position="1225,350" size="100,100">&lt;&lt;silently&gt;&gt;/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 
 &lt;&lt;set _automata_category to &quot;🤖 Automata&quot;&gt;&gt;
 
@@ -292,7 +319,7 @@ What are you searching for?
 # Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
 # Go to @@.channel;#_automata_channel@@ in &#39;Automata&#39; to use the bot.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="WhereToDiscuss" tags="nobr" position="1225,350" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="WhereToDiscuss" tags="nobr" position="100,475" size="100,100">&lt;&lt;silently&gt;&gt;
 /* This particular passage is shared to make boilerplate about where to discuss articles. */
 /* If you don&#39;t have a &#39;set&#39; macro, this *should* default to the general projects channel, but it might not quite be working.*/
 
@@ -304,7 +331,7 @@ What are you searching for?
   &lt;&lt;set _discussion_category to &quot;🙌 Getting Involved&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;/silently&gt;&gt;
 
-Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. &lt;&lt;if _discussion_category isnot &quot;🙌 Getting Involved&quot;&gt;&gt;You&#39;ll need the &#39;_discussion_category&#39; role in @@.channel;#roles-and-sigils@@ to see this channel.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="WobSites" tags="" position="1300,50" size="100,100">What are you hoping to see?
+Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. &lt;&lt;if _discussion_category isnot &quot;🙌 Getting Involved&quot;&gt;&gt;You&#39;ll need the &#39;_discussion_category&#39; role in @@.channel;#roles-and-sigils@@ to see this channel.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="WobSites" tags="" position="1300,50" size="100,100">What are you hoping to see?
 
 Current statuses:
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
@@ -334,29 +361,29 @@ Other:
 [[Help me come up with blaseball-y names and assign blaseball attributes to original names|Onomancer][$discussion_channel to &quot;ch00bs-cursed-projects&quot;]]
 [[Information about past &#39;Inside a Blaseball&#39; streams|IAB]]
 [[Things to keep in mind when building my own tools or analyses|Falsehoods]]
-[[Player and team IDs|BlaseGuids][$discussion_channel to &quot;📽-Projects&quot;]]</tw-passagedata><tw-passagedata pid="32" name="NumberCrunchy" tags="" position="1300,75" size="100,100">We&#39;re happy to serve you data. What do you need?
+[[Player and team IDs|BlaseGuids][$discussion_channel to &quot;📽-Projects&quot;]]</tw-passagedata><tw-passagedata pid="33" name="NumberCrunchy" tags="" position="1300,75" size="100,100">We&#39;re happy to serve you data. What do you need?
 
 [[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]]
 [[Seasonal and historical data, in mostly raw form|Chronicler]]
 [[Derived performance data, like batting averages|Datablase]]
 [[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
-[[Some combo of the above, and by the way I&#39;m using Python|Mike]]</tw-passagedata><tw-passagedata pid="33" name="Other" tags="" position="350,475" size="100,100">What could you be looking for?
+[[Some combo of the above, and by the way I&#39;m using Python|Mike]]</tw-passagedata><tw-passagedata pid="34" name="Other" tags="" position="475,475" size="100,100">What could you be looking for?
 
 [[Have a bot announce blaseball games for me|Jlohn][$discussion_channel to &quot;ch00bs-cursed-projects&quot;]]
 [[Tell me about this tool|MetaWhich]]
 [[Tell me about fishery management|Salmon]]
-[[User styles for enhancing my blaseball browser experience|UserStyles]]</tw-passagedata><tw-passagedata pid="34" name="MetaWhich" tags="" position="475,475" size="100,100">This tool attempts to bring together a number of SIBR projects, to help folks find &quot;that one thing I know I saw somewhere&quot;. It&#39;s brought to you by Kawa. Individual tool makers are invited to add or update info on their own tools! 
+[[User styles for enhancing my blaseball browser experience|UserStyles]]</tw-passagedata><tw-passagedata pid="35" name="MetaWhich" tags="" position="600,475" size="100,100">This tool attempts to bring together a number of SIBR projects, to help folks find &quot;that one thing I know I saw somewhere&quot;. It&#39;s brought to you by Kawa. Individual tool makers are invited to add or update info on their own tools! 
 
 [[Source here|https://github.com/kawa-kitsuragi/whichtool]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Mike" tags="" position="600,475" size="100,100">&lt;&lt;set $discussion_channel to &quot;ch00bs-cursed-projects&quot;&gt;&gt;
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Mike" tags="" position="725,475" size="100,100">&lt;&lt;set $discussion_channel to &quot;ch00bs-cursed-projects&quot;&gt;&gt;
 [[blaseball_mike|https://jmaliksi.github.io/blaseball-mike/]] is a Python wrapper for the [[official API|OfficialAPI]], [[Chronicler]], [[Eventually]], and (partially) [[Datablase]].
 
 Brought to you by ch00beh and Edgarware. Source code [[here|https://github.com/jmaliksi/blaseball-mike]].
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Notebooks" tags="" position="725,475" size="100,100">[[These graphs|https://edgarware.github.io/blaseball_notebooks/star_average.html]] show team average stars changing over time. It&#39;s brought to you by Edgarware.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Notebooks" tags="" position="850,475" size="100,100">[[These graphs|https://edgarware.github.io/blaseball_notebooks/star_average.html]] show team average stars changing over time. It&#39;s brought to you by Edgarware.
 
-Source [[here|https://github.com/Edgarware/blaseball_notebooks/blob/main/misc_notebooks/star_average.ipynb]]. Elsewhere in that repository are other Jupyter notebooks that may be of interest, mostly involving past elections, and a great [[tutorial|https://edgarware.github.io/blaseball_notebooks/tutorial.html]] on how to make your own!</tw-passagedata><tw-passagedata pid="37" name="OfficialAPI" tags="" position="850,475" size="100,100">You can extract data directly from the API that powers blaseball.com itself. Since this is the data that powers the website, it&#39;s the fastest source for at-the-moment updates.
+Source [[here|https://github.com/Edgarware/blaseball_notebooks/blob/main/misc_notebooks/star_average.ipynb]]. Elsewhere in that repository are other Jupyter notebooks that may be of interest, mostly involving past elections, and a great [[tutorial|https://edgarware.github.io/blaseball_notebooks/tutorial.html]] on how to make your own!</tw-passagedata><tw-passagedata pid="38" name="OfficialAPI" tags="" position="975,475" size="100,100">You can extract data directly from the API that powers blaseball.com itself. Since this is the data that powers the website, it&#39;s the fastest source for at-the-moment updates.
 
 We&#39;ve discovered a number of endpoints and try to collect documentation [[here|https://docs.sibr.dev/docs/apis/reference/Blaseball-API.v1.yaml]]. 
 
@@ -364,58 +391,58 @@ Discussion about finding and using these endpoints generally happens at @@.chann
 
 We also have a [[CORS proxy|https://cors-proxy.blaseball-reference.com/]] available for you, as well as a CSV redirect: you can replace a {{{blaseball.com}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
 
-The major caveat to using this is that endpoints tend to give current data, not historical data, on a per-game-event basis. [[Chronicler]] is your best bet for past events on that per-game-event basis, and [[Datablase]] is your choice collapsing game events to at-bats. It can also be hard to compare things across teams in some cases, where our downstream APIs will serve you better. Feel free to ask in @@.channel;#❓-help-desk@@ in &#39;The Society&#39; for API help!</tw-passagedata><tw-passagedata pid="38" name="Onomancer" tags="" position="975,475" size="100,100">[[Onomancer|https://onomancer.sibr.dev]] collects potential blaseball names, generates apple stats (and derived stars etc) for those names, and lets you rate them and collect them into custom teams. It&#39;s brought to you by ch00beh.
+The major caveat to using this is that endpoints tend to give current data, not historical data, on a per-game-event basis. [[Chronicler]] is your best bet for past events on that per-game-event basis, and [[Datablase]] is your choice collapsing game events to at-bats. It can also be hard to compare things across teams in some cases, where our downstream APIs will serve you better. Feel free to ask in @@.channel;#❓-help-desk@@ in &#39;The Society&#39; for API help!</tw-passagedata><tw-passagedata pid="39" name="Onomancer" tags="" position="1100,475" size="100,100">[[Onomancer|https://onomancer.sibr.dev]] collects potential blaseball names, generates apple stats (and derived stars etc) for those names, and lets you rate them and collect them into custom teams. It&#39;s brought to you by ch00beh.
 
 It includes an API for using these names in your own projects. 
 
 Source code [[here|https://github.com/jmaliksi/onomancer]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="PlayoffTables" tags="" position="1100,475" size="100,100">[[Blaseball Playoff Status|https://mixolyde.net/blaseballstatus/index.html]] breaks down the current season&#39;s status regarding playoff positions and &quot;Party Time&quot; (needs more than 1 Win per game to make the playoffs). It&#39;s brought to you by Mixolyde.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="PlayoffTables" tags="" position="1225,475" size="100,100">[[Blaseball Playoff Status|https://mixolyde.net/blaseballstatus/index.html]] breaks down the current season&#39;s status regarding playoff positions and &quot;Party Time&quot; (needs more than 1 Win per game to make the playoffs). It&#39;s brought to you by Mixolyde.
 
 [[Source code here|https://github.com/mixolyde/blaseballstatus]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Reblase" tags="" position="1225,475" size="100,100">[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. Brought to you by Astrid.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Reblase" tags="" position="100,600" size="100,100">[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. Brought to you by Astrid.
 
 [[Here&#39;s the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] 
 &lt;&lt;set $discussion_channel to &quot;reblase&quot;&gt;&gt;
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Renovations" tags="" position="100,600" size="100,100">[[Renovations.SIBR.dev|https://renovations.sibr.dev/]] is a web visualizer to show all current and past know stadium renovation modifications, as well as to show current ballpark stats, without needing to flute between teams or purchase a pizza concession. It&#39;s brought to you by Dlareau.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Renovations" tags="" position="225,600" size="100,100">[[Renovations.SIBR.dev|https://renovations.sibr.dev/]] is a web visualizer to show all current and past know stadium renovation modifications, as well as to show current ballpark stats, without needing to flute between teams or purchase a pizza concession. It&#39;s brought to you by Dlareau.
 
 All known renovations across all teams are shown at the top, and you can hover over a renovation or a ballpark stat (once expanded) to see what it does. These expanded ballpark stats are mild FK potentially, as the current Blaseball.com website does not display specific values for these visually.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Salmon" tags="" position="225,600" size="100,100">Welcome to the Salmon Institute for Blaseball Research.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Salmon" tags="" position="350,600" size="100,100">Welcome to the Salmon Institute for Blaseball Research.
 you can find us at @@.channel;#crisp@@ under &#39;🐟 Salmon&#39;, and you&#39;ll need the matching role in @@.channel;#roles-and-sigils@@ to see it.
 
 [[This smells fishy. What is it all about?|SteveWriteup]]
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[I want to use python to run salmon simulations|salmon_lib]]
-[[I want to use an API to run salmon simulations|webcrisp]]</tw-passagedata><tw-passagedata pid="43" name="SteveWriteup" tags="" position="350,600" size="100,100">There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
-[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]</tw-passagedata><tw-passagedata pid="44" name="salmon_lib" tags="" position="475,600" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="45" name="webcrisp" tags="" position="600,600" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="46" name="SalmonScoreboard" tags="" position="725,600" size="100,100">Salmon, under Salmon Weather (as of Season 15), steal runs by swimming upstream. [[This page|https://hora.github.io/blaseball-scoreboard/]] shows every game the salmon were in, and how many runs they took, as if they were a third team on the field. A white triangle indicates the ILB winner of the game; a pink triangle notes that the salmon had more Runs than at least one ILB team.
+[[I want to use an API to run salmon simulations|webcrisp]]</tw-passagedata><tw-passagedata pid="44" name="SteveWriteup" tags="" position="475,600" size="100,100">There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
+[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]</tw-passagedata><tw-passagedata pid="45" name="salmon_lib" tags="" position="600,600" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="46" name="webcrisp" tags="" position="725,600" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="47" name="SalmonScoreboard" tags="" position="850,600" size="100,100">Salmon, under Salmon Weather (as of Season 15), steal runs by swimming upstream. [[This page|https://hora.github.io/blaseball-scoreboard/]] shows every game the salmon were in, and how many runs they took, as if they were a third team on the field. A white triangle indicates the ILB winner of the game; a pink triangle notes that the salmon had more Runs than at least one ILB team.
 
 Brought to you by Dawn T.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Sclorigami" tags="" position="850,600" size="100,100">A new blaseball final score is called [[Sclorigami|https://docs.google.com/spreadsheets/d/1ITCtaZAXimgO7bjPaBeb3w_n9R20cEH07kIsSFJEj90/edit#gid=0]]! Brought to you by Ifh Biff.</tw-passagedata><tw-passagedata pid="48" name="SnaxBot" tags="" position="975,600" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Purveyor of Crates and Glitters can help you pick out snacks and idols, and tell you which games might beat the stated odds on-site! The Jester is primarily written by tehstone; idol/upset analysis by kjc9 and snack analysis by nago 🦀.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Sclorigami" tags="" position="975,600" size="100,100">A new blaseball final score is called [[Sclorigami|https://docs.google.com/spreadsheets/d/1ITCtaZAXimgO7bjPaBeb3w_n9R20cEH07kIsSFJEj90/edit#gid=0]]! Brought to you by Ifh Biff.</tw-passagedata><tw-passagedata pid="49" name="SnaxBot" tags="" position="1100,600" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Purveyor of Crates and Glitters can help you pick out snacks and idols, and tell you which games might beat the stated odds on-site! The Jester is primarily written by tehstone; idol/upset analysis by kjc9 and snack analysis by nago 🦀.
 
 &lt;&lt;include JoinUsForBots&gt;&gt;
 
 &lt;&lt;if $snax_var is &quot;idols&quot;&gt;&gt;You can also &quot;follow&quot; the @@.channel;#pendant-recommendations@@ channel in your own Discord server. &lt;&lt;/if&gt;&gt;
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]], [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]], [[or for the simulator working on idols and upsets|https://github.com/kjc9/blaseballgamesim]].</tw-passagedata><tw-passagedata pid="49" name="SnaxSheet" tags="" position="1100,600" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]], [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]], [[or for the simulator working on idols and upsets|https://github.com/kjc9/blaseballgamesim]].</tw-passagedata><tw-passagedata pid="50" name="SnaxSheet" tags="" position="1225,600" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
-Talk about this usually is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="50" name="Tome" tags="" position="1225,600" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
+Talk about this usually is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="51" name="Tome" tags="" position="100,725" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
 
 Source code [[here|https://github.com/Society-for-Internet-Blaseball-Research/tome]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="UserStyles" tags="" position="100,725" size="100,100">[[Blaseball Compact|https://thevdude.github.io/BlaseballCompact/]] is a Stylus userstyle to fit blaseball games during the regular season in a 3 x 4 grid. Consumer Contrast (at the same link) makes CONSUMERS stand out more on the page. Both are brought to you by theVdude.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="UserStyles" tags="" position="225,725" size="100,100">[[Blaseball Compact|https://thevdude.github.io/BlaseballCompact/]] is a Stylus userstyle to fit blaseball games during the regular season in a 3 x 4 grid. Consumer Contrast (at the same link) makes CONSUMERS stand out more on the page. Both are brought to you by theVdude.
 
 [[Emoji fix|https://holmesmr.github.io/Blaseball-Userstyles/]] is another Stylus userstyle to fix the emoji of the Spies, Fridays, and Mechs, and un-ORBs the Talkers. It&#39;s brought to you by Cepheus. Note that the &#39;BIG SCREEN BLASEBALL&#39; style on this page is a prereq to Compact, but was not updated to fit the 2 extra games per day that were started in Season 13.
 
-[[Blaseball+|https://addons.mozilla.org/en-US/firefox/addon/blaseball-plus/]] adds functionality such as [[Reblase]] and [[Abslve]] links for Firefox. It&#39;s brought to you by leo60228.</tw-passagedata><tw-passagedata pid="52" name="VibeCheck" tags="" position="225,725" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
+[[Blaseball+|https://addons.mozilla.org/en-US/firefox/addon/blaseball-plus/]] adds functionality such as [[Reblase]] and [[Abslve]] links for Firefox. It&#39;s brought to you by leo60228.</tw-passagedata><tw-passagedata pid="53" name="VibeCheck" tags="" position="350,725" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
 
-Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="53" name="WallOfTime" tags="" position="350,725" size="100,100">The [[Wall of Time|https://enbyss.com/tools/blaseball-time/]] shows countdowns to the various points of the blaseball season, and lets you get browser notifications close to when they happen.
+Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="54" name="WallOfTime" tags="" position="475,725" size="100,100">The [[Wall of Time|https://enbyss.com/tools/blaseball-time/]] shows countdowns to the various points of the blaseball season, and lets you get browser notifications close to when they happen.
 
 Brought to you by Enbyss. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Yuuko" tags="" position="475,725" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Yuuko" tags="" position="600,725" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
 Well, uh, now you can.
 
 &lt;&lt;set $bot_choice to &quot;Yuuko&quot;&gt;&gt;
