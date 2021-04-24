@@ -1,0 +1,42 @@
+:: Datablase
+
+<<set $discussion_channel to "💽-datablase">>
+
+The ''Datablase'' is our fancy name for a stack of technology that does the following:
+1) Ingest raw data from [[Chronicler]]
+2) Change it from individual-pitch events to per-atbat events
+3) Store it in a PostgreSQL DB
+4) Expose API endpoints for the DB
+
+<<include WhereToDiscuss>>
+
+[[Learn more about how it works or contribute to it|Contributing]]
+[[Get some data from it by using an API endpoint|DatablaseApi]]
+[[Get some data from it by handcrafting my own artisanal SQL queries|GuestAccess]]
+
+:: Contributing
+
+The two major Github projects that constitute the Datablase are:
+
+[[Prophesizer|https://github.com/Society-for-Internet-Blaseball-Research/prophesizer]]
+C# application that parses raw game updates into game events describing all the pitches that happened during an at-bat (mostly).
+
+[[Datablase|https://github.com/Society-for-Internet-Blaseball-Research/datablase]]
+Javascript application that exposes API endpoints for fetching DB information.
+[[blaseball-reference.com|BlaseballReference]] uses these APIs to drive its content.
+
+For more information on any of these, visit the @@.channel;#💽-datablase@@ channel on the SIBR Discord. You'll need access to the '💼 Major Projects' role in @@.channel;#roles-and-sigils@@ to see it. 
+
+[[Back to Datablase|Datablase]]
+
+:: DatablaseApi
+
+Documentation for the Datablase API can be found at https://api.blaseball-reference.com/docs#/
+
+[[Back to Datablase|Datablase]]
+
+:: GuestAccess
+
+We have a PGadmin setup for writing your own queries! Instructions on guest access are [[here|https://docs.sibr.dev/docs/apis/docs/z-datablase-guest-access.md]].
+
+[[Back to Datablase|Datablase]]

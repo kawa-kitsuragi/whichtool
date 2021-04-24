@@ -1,0 +1,9 @@
+:: Yuuko
+
+Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
+Well, uh, now you can.
+
+<<set $bot_choice to "Yuuko">>
+<<include JoinUsForBots>>
+
+Yuuko is made by allie (sapphicfettucine/alisww), using the CRiSP Harvest Model and salmon_lib. [[Find the source code here|https://github.com/alisww/yuuko]].

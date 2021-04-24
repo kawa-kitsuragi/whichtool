@@ -1,0 +1,7 @@
+:: Reblase
+
+[[Reblase|https://reblase.sibr.dev]] collects past game logs, future schedules, and points where players change. Brought to you by Astrid.
+
+[[Here's the source code.|https://github.com/Society-for-Internet-Blaseball-Research/Reblase]] 
+<<set $discussion_channel to "reblase">>
+<<include WhereToDiscuss>>

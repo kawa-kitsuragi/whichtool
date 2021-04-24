@@ -1,0 +1,9 @@
+:: SnaxBot
+
+<<set $bot_choice to "SnaxBot">>Our friendly local Purveyor of Crates and Glitters can help you pick out snacks and idols, and tell you which games might beat the stated odds on-site! The Jester is primarily written by tehstone; idol/upset analysis by kjc9 and snack analysis by nago 🦀.
+
+<<include JoinUsForBots>>
+
+<<if $snax_var is "idols">>You can also "follow" the @@.channel;#pendant-recommendations@@ channel in your own Discord server. <</if>>
+
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]], [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]], [[or for the simulator working on idols and upsets|https://github.com/kjc9/blaseballgamesim]]. 

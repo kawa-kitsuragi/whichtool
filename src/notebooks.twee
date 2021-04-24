@@ -1,0 +1,5 @@
+:: Notebooks
+
+[[These graphs|https://edgarware.github.io/blaseball_notebooks/star_average.html]] show team average stars changing over time. It's brought to you by Edgarware.
+
+Source [[here|https://github.com/Edgarware/blaseball_notebooks/blob/main/misc_notebooks/star_average.ipynb]]. Elsewhere in that repository are other Jupyter notebooks that may be of interest, mostly involving past elections, and a great [[tutorial|https://edgarware.github.io/blaseball_notebooks/tutorial.html]] on how to make your own!

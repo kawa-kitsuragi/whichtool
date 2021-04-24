@@ -1,0 +1,19 @@
+:: Salmon
+
+Welcome to the Salmon Institute for Blaseball Research.
+you can find us at @@.channel;#crisp@@ under '🐟 Salmon', and you'll need the matching role in @@.channel;#roles-and-sigils@@ to see it.
+
+[[This smells fishy. What is it all about?|SteveWriteup]]
+[[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
+[[I want to use python to run salmon simulations|salmon_lib]]
+[[I want to use an API to run salmon simulations|webcrisp]]
+
+:: SteveWriteup
+There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
+[[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]
+
+:: salmon_lib
+SIBR's salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]
+
+:: webcrisp
+We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]

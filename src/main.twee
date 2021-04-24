@@ -1,0 +1,144 @@
+/* This file is for the 'main flow' - intialization and things shared by multiple end points. Individual end points get their own pages. */
+
+:: StoryTitle
+WhichTool
+
+:: StoryAuthor {"position":"268,439","size":"100,100"}
+brought to you by Kawa#7680
+
+
+:: StorySubtitle {"position":"392,432","size":"100,100"}
+If this tool doesn't help, or your needs are more specific, feel free to join us at [[discord.sibr.dev|https://discord.sibr.dev]], specifically the "Help Desk" channel, and we can get you where you need to go.
+
+:: StoryMenu
+/* <<link "Toggle light/dark mode">>
+ to do: figure out how to hook this into the JS
+<</link>> */
+
+:: StoryData
+{
+  "ifid": "F79B1E6A-7782-4099-B834-867C0F5CA858",
+	"format": "SugarCube",
+	"format-version": "2.30.0",
+	"start": "Intro",
+	"zoom": 0.6
+}
+
+:: StoryInit
+<<set $bot_choice to null>>
+<<set $snax_var to null>>
+<<set $blasebot_var to null>>
+<<set $discussion_channel to "📽-Projects">>
+
+:: Intro {"position":"1100,50","size":"100,100"}
+Congratulations on enjoying the cultural event of Blaseball!
+
+What are you searching for?
+[[A Discord bot|DiscordBots]]
+[[A web site or graphical interface|WobSites]]
+[[I'm building my own tool or analysis, I need raw data in some form|NumberCrunchy]]
+[[Something else|Other]]
+
+:: DiscordBots {"position":"1300, 25"}
+What are you hoping for your bot to do?
+[[Teach me about concessions|SnaxBot][$snax_var to "snacks"]]
+[[Tell me who to idol and possible upset bets|SnaxBot][$snax_var to "idols"]]
+[[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
+[[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
+[[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
+[[Tell me when cool stuff happens in games, like perfect games and hits for cycles|CoolEvents][$bot_choice to "CoolEvents"]]
+
+:: JoinUsForBots
+<<silently>>/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
+
+<<set _automata_category to "🤖 Automata">>
+
+<<if $snax_var is "snacks">>
+  <<set _automata_channel to "snax-factory">>
+  <<set $discussion_channel to "snax-bot">>
+<<elseif $snax_var is "idols">>
+  <<set _automata_channel to "pendant-recommendations">>
+  <<set $discussion_channel to "game-sim-sim-bot-aka-metasim-v2">>
+<<elseif $blasebot_var isnot null>>
+  <<set _automata_channel to "blasebot-usage">>
+  <<set $discussion_channel to "blasebot-project">>
+<<elseif $bot_choice is "CoolEvents">>
+  <<set _automata_channel to "statistical-significance">>
+<<elseif $bot_choice is "Yuuko">> /* salmon */
+  <<set _automata_channel to "bot-crimes">>
+  <<set $discussion_channel to "crisp">>
+  <<set _automata_category to "🐟 Salmon">>
+<</if>>
+
+<</silently>>To use the bot:
+
+# Visit us [[on the server|https://discord.sibr.dev]]
+# Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
+# Go to @@.channel;#_automata_channel@@ in 'Automata' to use the bot.
+
+<<include WhereToDiscuss>>
+
+:: WhereToDiscuss [nobr]
+<<silently>>
+/* This particular passage is shared to make boilerplate about where to discuss articles. */
+/* If you don't have a 'set' macro, this *should* default to the general projects channel, but it might not quite be working.*/
+
+<<if $discussion_channel is "crisp">>
+  <<set _discussion_category to "🐟 Salmon">>
+<<elseif $discussion_channel isnot "📽-Projects">>
+  <<set _discussion_category to "💼 Major Projects">>
+<<else>>
+  <<set _discussion_category to "🙌 Getting Involved">>
+<</if>><</silently>>
+
+Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. <<if _discussion_category isnot "🙌 Getting Involved">>You'll need the '_discussion_category' role in @@.channel;#roles-and-sigils@@ to see this channel.<</if>>
+
+:: WobSites {"position":"1300,50"}
+What are you hoping to see?
+
+Current statuses:
+[[Teach me about concessions, schedules, and matchups|SnaxSheet]]
+[[Player stats right now|Abslve]]
+[[Vibes over the course of the current season|VibeCheck]]
+[[Comparing teams to each other this season|Chartographer][$discussion_channel to "📽-Projects"]]
+[[How many games to the playoffs/party time|PlayoffTables][$discussion_channel to "📽-Projects"]]
+[[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to "blases-loaded"]]
+[[A visual guide to contributions to current team eDensity|eDensitySimulator][$discussion_channel to "📽-Projects"]]
+[[What time is it?|WallOfTime][$discussion_channel to "📽-Projects"]]
+
+Current and historical data:
+[[Past game logs and schedules|Reblase]]
+[[Win/Loss in this season and past ones|ChartParty]]
+[[Schedules and derived performance like batting averages|BlaseballReference][$discussion_channel to "blaseball-reference"]]
+[[Team star averages over time|Notebooks]]
+[[Player stars changing over time|Hloroscopes][$discussion_channel to "📽-Projects"]]
+[[Break down individual games into inning-based line scores|LineScore]]
+[[Break down individual games for each player's actions|Tome][$discussion_channel to "ch00bs-cursed-projects"]]
+[[Currently available and past options for stadium renovations|Renovations]]
+[[Show me how the salmon are running|SalmonScoreboard][$discussion_channel to "📽-Projects"]]
+[[Keep track of sick skateboarding moves|GrindRail][$discussion_channel to "📽-Projects"]]
+[[Has this blaseball score been seen before?|Sclorigami]]
+
+Other:
+[[Teach me to imitate a squid|HallMonitor]]
+[[Help me come up with blaseball-y names and assign blaseball attributes to original names|Onomancer][$discussion_channel to "ch00bs-cursed-projects"]]
+[[Information about past 'Inside a Blaseball' streams|IAB]]
+[[Things to keep in mind when building my own tools or analyses|Falsehoods]]
+[[Player and team IDs|BlaseGuids][$discussion_channel to "📽-Projects"]]
+
+:: NumberCrunchy {"position":"1300,75"}
+We're happy to serve you data. What do you need?
+
+[[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]]
+[[Seasonal and historical data, in mostly raw form|Chronicler]]
+[[Derived performance data, like batting averages|Datablase]]
+[[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
+[[Some combo of the above, and by the way I'm using Python|Mike]]
+
+:: Other
+What could you be looking for?
+
+[[Have a bot announce blaseball games for me|Jlohn][$discussion_channel to "ch00bs-cursed-projects"]]
+[[Tell me about this tool|MetaWhich]]
+[[Tell me about fishery management|Salmon]]
+[[User styles for enhancing my blaseball browser experience|UserStyles]]
