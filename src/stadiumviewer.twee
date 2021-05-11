@@ -1,0 +1,7 @@
+:: StadiumViewer
+
+[[The Stadium Viewer|https://stadium-viewer.sibr.dev/]] renders blaseball stadiums based on their renovations and properties (such as grandiosity). On desktop, use WASD to rotate the stadium in space, and R+F for zooming. 
+
+It's brought to you by Rose. [[Source here|https://github.com/RosaryMala/BlaseballStadiumViewer]].
+
+<<include WhereToDiscuss>>
