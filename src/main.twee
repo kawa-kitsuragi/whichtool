@@ -96,7 +96,11 @@ Development questions and bug reports can be brought up in @@.channel;#$discussi
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?
 
-Current statuses:
+[[Current statuses|CurrentData]]
+[[Current and historical data|HistoricalData]]
+[[Other toys and meta-information|SitesEtc]]
+
+:: CurrentData
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
 [[Player stats right now|Abslve]]
 [[Vibes over the course of the current season|VibeCheck]]
@@ -105,8 +109,9 @@ Current statuses:
 [[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to "blases-loaded"]]
 [[A visual guide to contributions to current team eDensity|eDensitySimulator][$discussion_channel to "📽-Projects"]]
 [[What time is it?|WallOfTime][$discussion_channel to "📽-Projects"]]
+[[None of these, take me back|WobSites]]
 
-Current and historical data:
+:: HistoricalData
 [[Past game logs and schedules|Reblase]]
 [[Win/Loss in this season and past ones|ChartParty]]
 [[Schedules and derived performance like batting averages|BlaseballReference][$discussion_channel to "blaseball-reference"]]
@@ -118,13 +123,16 @@ Current and historical data:
 [[Show me how the salmon are running|SalmonScoreboard][$discussion_channel to "📽-Projects"]]
 [[Keep track of sick skateboarding moves|GrindRail][$discussion_channel to "📽-Projects"]]
 [[Has this blaseball score been seen before?|Sclorigami]]
+[[None of these, take me back|WobSites]]
 
-Other:
+:: SitesEtc
 [[Teach me to imitate a squid|HallMonitor]]
 [[Help me come up with blaseball-y names and assign blaseball attributes to original names|Onomancer][$discussion_channel to "ch00bs-cursed-projects"]]
 [[Information about past 'Inside a Blaseball' streams|IAB]]
 [[Things to keep in mind when building my own tools or analyses|Falsehoods]]
 [[Player and team IDs|BlaseGuids][$discussion_channel to "📽-Projects"]]
+[[About this tool itself|MetaWhich]]
+[[None of these, take me back|WobSites]]
 
 :: NumberCrunchy {"position":"1300,75"}
 We're happy to serve you data. What do you need?
