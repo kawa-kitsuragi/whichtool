@@ -102,7 +102,7 @@ What are you hoping to see?
 
 :: CurrentData
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
-[[Player stats right now|Abslve]]
+[[Player apple stats and items right now|PlayerViewers][$discussion_channel to "astrids-player-table"]]
 [[Vibes over the course of the current season|VibeCheck]]
 [[Comparing teams to each other this season|Chartographer][$discussion_channel to "📽-Projects"]]
 [[How many games to the playoffs/party time|PlayoffTables][$discussion_channel to "📽-Projects"]]
