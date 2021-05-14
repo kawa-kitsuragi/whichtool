@@ -1,0 +1,12 @@
+:: PlayerViewers
+
+The current "best source" for apple stats (such as divinity and shakesperianism) is [[this player viewer|https://blaseballplayers.netlify.app/]]. It features robust searching and filtering, the ability to save subsets of players for easy comparison, as well as noting additions/subtractions due to items in italics.
+
+It's brought to you by Astrid, and it's currently a work in progress. [[Contribute to the source here|https://github.com/xSke/blaseball-player-list]].
+
+<<include WhereToDiscuss>>
+
+If you'd like, you can also support Astrid's efforts directly through her [[Patreon|https://www.patreon.com/floofstrid]].
+
+Notably, the newest player viewer currently does not have alternate color schemes for colorblindness. If you require that before this is added, try [[Abslve|https://slavfox.space/abslve/#SUN]] or [[the original viewer|https://stlats.sibr.dev]], but neither are in active development and may have unusual behavior (e.g. including Coffee Cup teams mixed with ILB teams, not reflecting items).
+
