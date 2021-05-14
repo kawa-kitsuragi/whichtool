@@ -48,6 +48,8 @@ Setting.addToggle("lightmode", {
 <<set $snax_var to null>>
 <<set $blasebot_var to null>>
 <<set $discussion_channel to "📽-Projects">>
+<<remove "#menu-item-saves">>
+<<remove "#menu-item-restart">>
 
 :: PassageReady
 /* We seem to need to re-run the CSS change whenever the passage reload */
