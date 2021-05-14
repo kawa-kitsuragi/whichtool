@@ -6,6 +6,7 @@ on:
       - '**.twee'
       - 'src/**'
       - '.github/workflows/**'
+      - 'headers.html'
     branches:
       - main
 
