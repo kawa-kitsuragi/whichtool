@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-html {
+:root {
+  --main-bg-color: #111;
+  --sidebar-bg-color: #222;
+  --divider-color: #444;
+  --text-color: #eee;
+  --link-color: #9675b9;
+  --link-hover-color: #7398F5; 
+}
+
+.lightmode 
+{
+  --main-bg-color: #eee8d5;
+  --sidebar-bg-color: #fdf6e3;
+  --text-color: black;
+  --link-color: #590070;
+}
+
+html 
+{
   height: 100%;
 }
 
-body, tw-story
+body
 {
   font-family: 'Lora', serif;
   margin-left: 2em;
   height: 100%;
-}
-
-/* not actually implemented yet - the JS doesn't hook to anything */
-.light-mode {
-  background-color: whitesmoke;
-  color: black;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
 }
 
 .channel {
@@ -23,3 +37,67 @@ body, tw-story
   white-space: 'pre-line'
 }
 
+#ui-bar 
+{
+  background: var(--sidebar-bg-color);
+  border-right: 1px solid var(--divider-color);
+}
+
+a {
+	color: var(--link-color); 
+	font-weight: bold; 
+}
+
+/* Links when the mouse is over them */
+a:hover {
+	color: var(--link-hover-color); 
+	font-weight: bold; 
+}
+
+#menu li a {
+  color: var(--link-color);
+}
+
+#menu li a:hover {
+  background-color: var(--sidebar-bg-color);
+  color: var(--link-hover-color);
+}
+
+#ui-dialog-body {
+  background: var(--main-bg-color);
+  color: var(--text-color);
+}
+
+#ui-dialog-titlebar {
+  background: var(--sidebar-bg-color);
+  color: var(--text-color);
+}
+
+#ui-bar-history [id|=history], #ui-bar-toggle
+{
+  background: var(--sidebar-bg-color);
+  color: var(--link-color);
+  border-color: var(--divider-color);
+}
+
+#ui-bar-history [id|=history]:hover, #ui-bar-toggle:hover
+{
+  background: var(--sidebar-bg-color);
+  border-color: var(--divider-color);
+  color: var(--link-hover-color);
+}
+
+button 
+{
+  background: var(--main-bg-color);
+  color: var(--link-color);
+  font-weight: bold;
+  border: 1px solid var(--divider-color);
+}
+
+button:hover 
+{
+  background: var(--main-bg-color);
+  color: var(--link-hover-color);
+  font-weight: bold;
+}

@@ -23,15 +23,38 @@ If this tool doesn't help, or your needs are more specific, feel free to join us
 	"start": "Intro",
 	"zoom": 0.6
 }
+:: Lightmode [script]
+setup.lightmodeFunc = function() {if (settings.lightmode) { // is true
+		$("body").addClass("lightmode"); 
+    // If you want more HTML elements to change, add the class to them too
+	}
+	else { // is false
+		$("body").removeClass("lightmode");
+	}
+}
+
+:: Story JavaScript [script]
+// Setting up a toggle control for the settings property 'lightmode' w/ callbacks
+Setting.addHeader("Settings");
+Setting.addToggle("lightmode", {
+  label: "Lightmode",
+  desc: "Change the display of whichtool for lighter colours",
+  default  : false,
+	onChange : setup.lightmodeFunc
+  });
 
 :: StoryInit
 <<set $bot_choice to null>>
 <<set $snax_var to null>>
 <<set $blasebot_var to null>>
 <<set $discussion_channel to "📽-Projects">>
+<<remove "#menu-item-saves">>
+
+:: PassageReady
+/* We seem to need to re-run the CSS change whenever the passage reload */
+<<= setup.lightmodeFunc()>>
 
 :: Intro {"position":"1100,50","size":"100,100"}
-/* HTML for metadata */
 
 Congratulations on enjoying the cultural event of Blaseball!
 
