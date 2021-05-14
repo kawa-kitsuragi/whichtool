@@ -49,14 +49,12 @@ Setting.addToggle("lightmode", {
 <<set $blasebot_var to null>>
 <<set $discussion_channel to "📽-Projects">>
 <<remove "#menu-item-saves">>
-<<remove "#menu-item-restart">>
 
 :: PassageReady
 /* We seem to need to re-run the CSS change whenever the passage reload */
 <<= setup.lightmodeFunc()>>
 
 :: Intro {"position":"1100,50","size":"100,100"}
-/* HTML for metadata */
 
 Congratulations on enjoying the cultural event of Blaseball!
 
