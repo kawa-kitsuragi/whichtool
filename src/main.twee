@@ -35,6 +35,7 @@ setup.lightmodeFunc = function() {if (settings.lightmode) { // is true
 
 :: Story JavaScript [script]
 // Setting up a toggle control for the settings property 'lightmode' w/ callbacks
+// No Kawa, no matter how much you think about it, you cannot move these to a separate JS file
 Setting.addHeader("Settings");
 Setting.addToggle("lightmode", {
   label: "Lightmode",
@@ -76,16 +77,18 @@ What are you hoping for your bot to do?
 :: JoinUsForBots
 <<silently>>/* This particular passage is shared by various Discord bot pages to make boilerplate about how to automata on SIBRcord. */
 
+/* Defaults: bot-usage in Automata, discussion in standard project channel */
 <<set _automata_category to "🤖 Automata">>
+<<set _automata_channel to "bot-usage">>
+<<set $discussion_channel to "📽-Projects">>
 
+/* Overrides */
 <<if $snax_var is "snacks">>
-  <<set _automata_channel to "snax-factory">>
   <<set $discussion_channel to "snax-bot">>
 <<elseif $snax_var is "idols">>
   <<set _automata_channel to "pendant-recommendations">>
   <<set $discussion_channel to "game-sim-sim-bot-aka-metasim-v2">>
 <<elseif $blasebot_var isnot null>>
-  <<set _automata_channel to "blasebot-usage">>
   <<set $discussion_channel to "blasebot-project">>
 <<elseif $bot_choice is "CoolEvents">>
   <<set _automata_channel to "statistical-significance">>
@@ -96,11 +99,9 @@ What are you hoping for your bot to do?
 <</if>>
 
 <</silently>>To use the bot:
-
 # Visit us [[on the server|https://discord.sibr.dev]]
 # Pick out the _automata_category role in @@.channel;#roles-and-sigils@@
-# Go to @@.channel;#_automata_channel@@ in 'Automata' to use the bot.
-
+# Go to @@.channel;#_automata_channel@@ in _automata_category to use the bot.
 <<include WhereToDiscuss>>
 
 :: WhereToDiscuss [nobr]
@@ -114,9 +115,9 @@ What are you hoping for your bot to do?
   <<set _discussion_category to "💼 Major Projects">>
 <<else>>
   <<set _discussion_category to "🙌 Getting Involved">>
-<</if>><</silently>>
+<</if>>
 
-Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. <<if _discussion_category isnot "🙌 Getting Involved">>You'll need the '_discussion_category' role in @@.channel;#roles-and-sigils@@ to see this channel.<</if>>
+<</silently>>Development questions and bug reports can be brought up in @@.channel;#$discussion_channel@@ in _discussion_category. <<if _discussion_category isnot "🙌 Getting Involved">>You'll need the '_discussion_category' role in @@.channel;#roles-and-sigils@@ to see this channel.<</if>>
 
 :: WobSites {"position":"1300,50"}
 What are you hoping to see?

@@ -6,14 +6,16 @@ Accepting PRs - contact `@Kawa#7680` in `#projects` in [SIBR](https://discord.si
 This is being built using the [Sugarcube](https://www.motoslave.net/sugarcube/2/docs/#introduction) story format; refer to that link for most syntax questions. Github Pages should auto-compile changes from the `src` directory into WhichTool.html then push [here](https://whichtool.sibr.dev); refer to [Em LazerWalker's excellent blog on the subject](https://blog.lazerwalker.com/azure,/game/dev/2020/01/16/a-modern-developers-workflow-for-twine.html) for more info on how that works.
 
 ## Adding your own tools
-Create a new `.twee` file in the `src` directory, titled after your tool. Here's a format to follow:
+Create a new `.twee` file in the `src\tools` directory, titled after your tool. Here's a format to follow:
 
 ```
 :: YourToolName
 
 [[This tool|https://whatever.sibr.dev]] does {things and stuff.} {Here's some notes on how to use it.}
 
-It's made by {this user!} The source code is [[here|https://github.com/me/mytool]]. If you'd like, you can also [[send me a Ko-Fi|https://ko-fi.com/me]].
+It's made by {this user!} The source code is [[here|https://github.com/me/mytool]]. 
+
+If you'd like, you can also [[send {this user} a Ko-Fi|https://ko-fi.com/me]].
 
 <<include WhereToDiscuss>>
 ```
@@ -39,11 +41,11 @@ If you have AutoHotKey, you can use the script in this repo - `+ch` will 'autoco
 
 ## Local Testing
 Install [Tweego](https://www.motoslave.net/tweego/) then in a command line
-`tweego src -o WhichTool.html`
+`tweego src -o WhichTool.html --head=headers.html`
 and test WhichTool.html in your favorite browser.
 
 Yo can also do 
-`tweego src -o -w WhichTool.html`
+`tweego -w src -o WhichTool.html --head=headers.html`
 and have the HTML auto-recompile each time you save anything in `src`.
 
 Kawa requests that HTML changes be discarded before pushing to main, to not interfere with Github Actions doing the same thing during its build process.
