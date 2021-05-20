@@ -13,7 +13,10 @@ you can find us at @@.channel;#crisp@@ under '🐟 Salmon', and you'll need the 
 There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
 [[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]
 
-Honu discussed the salmon saga on Blaseball Sunday, if you prefer to [[listen to the interview|https://youtu.be/L2poaPBgRmg?t=3065]].
+Honu discussed the salmon saga on Blaseball Sunday, if you prefer to listen to the interview:
+
+<html>
+<div class="container"><iframe class="responsive-iframe" src="https://www.youtube.com/embed/L2poaPBgRmg?start=3065" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></html>
 
 :: salmon_lib
 SIBR's salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]
