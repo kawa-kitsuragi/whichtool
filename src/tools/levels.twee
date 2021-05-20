@@ -1,0 +1,5 @@
+:: Levels
+
+[[Levels|https://levels.sibr.dev]] graphs each team's "imPosition" over time - the hidden variable that determines "credit rating" (e.g. 1D, Low A) and thus possibility of Consumer attacks. You can select for specific teams as well as the "noodle", a league-wide factor based on eDensity of idols. There's also a slider on the bottom to see different seasons' values. 
+
+It's brought to you by ubuntor. Source [[here|https://github.com/ubuntor/blaseball_imposition]]. Deeper discussion of immateria physics and eDensity is in @@.channel;#edensity-and-immateria-physics@@ - you'll need the "📖 Research" role in @@.channel;#roles-and-sigils@@ to see it. 
