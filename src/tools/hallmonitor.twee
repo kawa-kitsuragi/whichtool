@@ -1,5 +1,7 @@
 :: HallMonitor
 
-You can visit the [[Hall Monitor|https://squid.sibr.dev]] or the [[Food and Beverage Inspector|https://squid.sibr.dev/?hat=chef]], and feel free to use Inspect Element to create your own squiddish shenanigans. Brought to you collectively by the Council of Diviners.
+You can visit the [[Hall Monitor|https://squid.sibr.dev]], the [[Food and Beverage Inspector|https://squid.sibr.dev/?hat=chef]], or [[the CEO|https://squid.sibr.dev/?type=coin]].
+
+At the end of the URL, you can add {{{&text=}}} followed by the text you want each entity to say. You can also use Inspect Element to modify what you see.
 
 Source code [[here|https://github.com/Society-for-Internet-Blaseball-Research/squid]].
