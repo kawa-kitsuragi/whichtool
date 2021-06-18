@@ -2,4 +2,8 @@
 
 A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
-Talk about this usually is in @@.channel;#💰-economy@@ under '📖 Research'. You'll need the matching role from @@.channel;#roles-and-sigils@@ to see it.
+Partial code on how the spreadsheet is populated is [[here|https://github.com/alefeld/blaseball-snackonomy]], supplemented by [[another SIBR bot|https://github.com/tehstone/blaseballwatcher]]. Major maintainers are tehstone, Frostbird, and Origami Robot.
+
+<<set $discussion_channel to "econ-spreadsheets">><<include WhereToDiscuss>>
+
+More discussion about snack strats is in @@.channel;#💰-economy@@ under '📖 Research'. You'll need the matching role from @@.channel;#roles-and-sigils@@ to see it.
