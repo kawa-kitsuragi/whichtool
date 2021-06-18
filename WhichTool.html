@@ -331,7 +331,8 @@ What are you searching for?
 [[Keep track of sick skateboarding moves|GrindRail][$discussion_channel to &quot;📽-Projects&quot;]]
 [[Has this blaseball score been seen before?|Sclorigami]]
 [[Team level/credit rating over time|Levels]]
-[[None of these, take me back|WobSites]]</tw-passagedata><tw-passagedata pid="14" name="SitesEtc" tags="" position="475,225" size="100,100">[[Teach me to imitate a squid|HallMonitor]]
+[[Blaseball.com as it looked in the past|Before]]
+[[None of these, take me back|WobSites]]</tw-passagedata><tw-passagedata pid="14" name="SitesEtc" tags="" position="475,225" size="100,100">[[Teach me to imitate a squid or other blaseball entity|HallMonitor]]
 [[Help me come up with blaseball-y names and assign blaseball attributes to original names|Onomancer][$discussion_channel to &quot;ch00bs-cursed-projects&quot;]]
 [[Information about past &#39;Inside a Blaseball&#39; streams|IAB]]
 [[Things to keep in mind when building my own tools or analyses|Falsehoods]]
@@ -344,7 +345,7 @@ What are you searching for?
 [[Derived performance data, like batting averages|Datablase]]
 [[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
 [[Some combo of the above, and by the way I&#39;m using Python|Mike]]
-[[Some combo of the above, and by the way I&#39;m using Kotlin|kornea][$discussion_channel to &quot;📽-Projects&quot;]]</tw-passagedata><tw-passagedata pid="16" name="Other" tags="" position="725,225" size="100,100">What could you be looking for?
+[[Some combo of the above, and by the way I&#39;m using Kotlin|kornea][$discussion_channel to &quot;blits-and-blasement&quot;]]</tw-passagedata><tw-passagedata pid="16" name="Other" tags="" position="725,225" size="100,100">What could you be looking for?
 
 [[Have a bot announce blaseball games for me|Jlohn][$discussion_channel to &quot;ch00bs-cursed-projects&quot;]]
 [[Tell me about this tool|MetaWhich]]
@@ -388,7 +389,7 @@ Note if you want something similar to the &quot;Team Averages&quot; scatterplots
 
 Chronicler brings together game events and other data from the [[official API|OfficialAPI]] into a form that makes historical comparisons easier. It&#39;s brought to you by Astrid.
 
-API documentation [[here|https://astrid.stoplight.io/docs/sibr/reference/Chronicler.v1.yaml]]. Like for the official API, you can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
+API documentation [[here|https://astrid.stoplight.io/docs/sibr/reference/Chronicler.v1.yaml]]. A full list of update types is [[here|https://github.com/xSke/Chronicler/blob/main/SIBR.Storage.Data/Models/UpdateType.cs]]. Like for the official API, you can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
 
 There will always be some delay between updates on the official API and Chronicler. If you need events in an at-bat as opposed to per-pitch format, you&#39;re better off using [[Datablase]]. If you&#39;d like to use Python, [[there&#39;s a wrapper available|Mike]]. If you&#39;d like more robust search of the S12-onwards Feed, you&#39;re probably better off using [[Eventually]].
 
@@ -431,20 +432,18 @@ For more information on any of these, visit the @@.channel;#💽-datablase@@ cha
 
 Brought to you by hexane. Source available [[here|https://github.com/hexane360/edensity-sim/]]
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Eventually" tags="" position="1225,350" size="100,100">&lt;&lt;set $discussion_channel to &quot;eventuallie&quot;&gt;&gt;
-
-Eventually is a small search engine API for the blaseball feed (Seasons 12 onwards), allowing you to search through it with as much or as little specificity as you want.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Eventually" tags="" position="1225,350" size="100,100">Eventually is a small search engine API for the blaseball feed (Seasons 12 onwards), allowing you to search through it with as much or as little specificity as you want.
 Want to find every interaction between NaN and Forrest Best? [[Yep, you can do it!|https://api.sibr.dev/eventually/events?playerNames=Forrest%20Best_NaN]]
 
 You can find API documentation [[here|https://allie-signet.stoplight.io/docs/eventually/reference/eventually-api.v1.yaml]], or use the [[blaseball_mike wrapper for python|Mike]]. You can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
 
-There is a wrapper for Eventually for tracking upshells over time - [[Upnuts|https://github.com/UnderMybrella/whats-upnut/]], by UnderMybrella.
+There is a wrapper for Eventually for tracking upshells over time - [[Upnuts|https://github.com/UnderMybrella/whats-upnut/]], by UnderMybrella. More info on that in @@.channel;#blits-and-blasement@@ (in the &#39;💼 Major Projects&#39; role).
 
 If you&#39;re looking for pre-S12 game events, you&#39;re probably better off using [[Chronicler]].
 
 It&#39;s made by allie (sapphicfettucine#6248), and you can find the source code on [[this github repo|https://github.com/alisww/eventually]]
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Falsehoods" tags="" position="100,475" size="100,100">There are a lot of [[Falsehoods Programmers Believe about Blaseball|https://sibr.dev/falsehoods]]. No really, a &#39;&#39;lot&#39;&#39;. Brought to you collectively by the Council.
+&lt;&lt;set $discussion_channel to &quot;eventuallie&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Falsehoods" tags="" position="100,475" size="100,100">There are a lot of [[Falsehoods Programmers Believe about Blaseball|https://sibr.dev/falsehoods]]. No really, a &#39;&#39;lot&#39;&#39;. Brought to you collectively by the Council.
 
 You can [[submit more|https://airtable.com/shrFx0AoU7CJfxSP6]].</tw-passagedata><tw-passagedata pid="32" name="GrindRail" tags="" position="225,475" size="100,100">We have scoreboards for individual tricks, combos, and total scores when using the Grind Rail [[here|https://faculty.sibr.dev/~dlareau/grind_rail.html]]!
 
@@ -456,9 +455,9 @@ At the end of the URL, you can add {{{&amp;text=}}} followed by the text you wan
 
 Source code [[here|https://github.com/Society-for-Internet-Blaseball-Research/squid]].</tw-passagedata><tw-passagedata pid="34" name="Hloroscopes" tags="" position="475,475" size="100,100">[[Hloroscopes|https://hloroscopes.sibr.dev]] plots how players&#39; stars change over time (after events like blood drains, blessings, and the like). It&#39;s brought to you by yooori.
 
-It includes toggles for Forbidden Knowledge and apple-stat changes and spacing of the x axis.
+It includes toggles for Forbidden Knowledge and apple-stat changes and spacing of the x axis. [[Source here|https://github.com/teagrrl/astrology/tree/master/hloroscopes]].
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="IAB" tags="" position="600,475" size="100,100">[[This Notion link|https://www.notion.so/Cliff-s-Notes-Q-A-Archive-ba2a2ede574d4b85ace0c577fba492e1]] collects salient points and Q&amp;A from Inside a Blaseball, The Game Band&#39;s semi-regular livestream answering questions from the community. Brought to you by Cliff.
+&lt;&lt;set $discussion_channel to &quot;yooris-player-viewer&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="IAB" tags="" position="600,475" size="100,100">[[This Notion link|https://www.notion.so/Cliff-s-Notes-Q-A-Archive-ba2a2ede574d4b85ace0c577fba492e1]] collects salient points and Q&amp;A from Inside a Blaseball, The Game Band&#39;s semi-regular livestream answering questions from the community. Brought to you by Cliff.
 
 You can also see these questions categorized [[here|https://iab-questions.sibr.dev/]], by DLareau.
 
@@ -468,7 +467,7 @@ The source code is linked above. You can suggest more quips [[on Airtable|https:
 
 &lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="kornea" tags="" position="850,475" size="100,100">[[Kornea|https://github.com/UnderMybrella/kornea-blaseball]] is an API wrapper for the [[official API|OfficialAPI]] and [[Chronicler]]. It&#39;s brought to you by UnderMybrella.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Levels" tags="" position="975,475" size="100,100">[[Levels|https://levels.sibr.dev]] graphs each team&#39;s &quot;imPosition&quot; over time - the hidden variable that determines &quot;credit rating&quot; (e.g. 1D, Low A) and thus possibility of Consumer attacks. You can select for specific teams as well as the &quot;noodle&quot;, a league-wide factor based on eDensity of idols. There&#39;s also a slider on the bottom to see different seasons&#39; values. 
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Levels" tags="" position="975,475" size="100,100">[[Levels|https://levels.sibr.dev]] graphs each team&#39;s &quot;imPosition&quot; over time - the y position on the Depth chart, a variable that determines &quot;credit rating&quot; (e.g. 1D, Low A) and thus possibility of Consumer attacks. You can select for specific teams as well as the &quot;noodle&quot;, a league-wide factor based on eDensity of idols. There&#39;s also a slider on the bottom to see different seasons&#39; values. 
 
 It&#39;s brought to you by ubuntor. Source [[here|https://github.com/ubuntor/blaseball_imposition]]. Deeper discussion of immateria physics and eDensity is in @@.channel;#edensity-and-immateria-physics@@ - you&#39;ll need the &quot;📖 Research&quot; role in @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="39" name="LineScore" tags="" position="1100,475" size="100,100">[[LineScores|https://linescore.sibr.dev/]] are generated for each game day and game, similar to what you&#39;d see in a newspaper. Comes with easy-to-paste alt text! Brought to you by iliana. 
 
@@ -493,6 +492,8 @@ Discussion about finding and using these endpoints generally happens at @@.chann
 
 We also have a [[CORS proxy|https://cors-proxy.blaseball-reference.com/]] available for you, as well as a CSV redirect: you can replace a {{{blaseball.com}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
 
+There are some convenience wrappers and websocket support built by UnderMybrella, known as cors-mechanics - more info at [[this Discord message|https://discord.com/channels/738107179294523402/738107864605786253/848873501115940906]] and @@.channel;#blits-and-blasement@@ (in the &#39;💼 Major Projects&#39; role).
+
 The major caveat to using this is that endpoints tend to give current data, not historical data, on a per-game-event basis. [[Chronicler]] is your best bet for past events on that per-game-event basis, and [[Datablase]] is your choice collapsing game events to at-bats. It can also be hard to compare things across teams in some cases, where our downstream APIs will serve you better. Feel free to ask in @@.channel;#❓-help-desk@@ in &#39;The Society&#39; for API help!</tw-passagedata><tw-passagedata pid="44" name="Onomancer" tags="" position="475,600" size="100,100">[[Onomancer|https://onomancer.sibr.dev]] collects potential blaseball names, generates apple stats (and derived stars etc) for those names, and lets you rate them and collect them into custom teams. It&#39;s brought to you by ch00beh.
 
 It includes an API for using these names in your own projects. 
@@ -507,7 +508,9 @@ It&#39;s brought to you by Astrid, and it&#39;s currently a work in progress. [[
 
 If you&#39;d like, you can also support Astrid&#39;s efforts directly through her [[Patreon|https://www.patreon.com/floofstrid]].
 
-Notably, the newest player viewer currently does not have alternate color schemes for colorblindness. If you require that before this is added, try [[Abslve|https://slavfox.space/abslve/#SUN]] or [[the original viewer|https://stlats.sibr.dev]], but neither are in active development and may have unusual behavior (e.g. including Coffee Cup teams mixed with ILB teams, not reflecting items).</tw-passagedata><tw-passagedata pid="46" name="PlayoffTables" tags="" position="725,600" size="100,100">[[Blaseball Playoff Status|https://mixolyde.net/blaseballstatus/index.html]] breaks down the current season&#39;s status regarding playoff positions and &quot;Party Time&quot; (needs more than 1 Win per game to make the playoffs). It&#39;s brought to you by Mixolyde.
+There&#39;s also [[Astrology|http://yoori.space/astrology/]] from yoori - it does not have the search/filter functions, but does include derived ratings along some metrics, modifications, and fast load times. (Combined stars are shown by default; there&#39;s a toggle on the bottom for individual apple stats.) [[Source here|https://github.com/teagrrl/astrology/tree/master/astrology]], discussion at @@.channel;#yooris-player-viewer@@ (also in Major Projects). 
+
+Notably, the newest player viewers currently do not have alternate color schemes for colorblindness, and right now, Astrid&#39;s is only available in light mode. If you require that, try [[Abslve|https://slavfox.space/abslve/#SUN]] or [[the original viewer|https://stlats.sibr.dev]], but neither are in active development and may have unusual behavior (e.g. including Coffee Cup teams mixed with ILB teams, not reflecting items).</tw-passagedata><tw-passagedata pid="46" name="PlayoffTables" tags="" position="725,600" size="100,100">[[Blaseball Playoff Status|https://mixolyde.net/blaseballstatus/index.html]] breaks down the current season&#39;s status regarding playoff positions and &quot;Party Time&quot; (needs more than 1 Win per game to make the playoffs). It&#39;s brought to you by Mixolyde.
 
 [[Source code here|https://github.com/mixolyde/blaseballstatus]]. 
 
@@ -550,7 +553,11 @@ Brought to you by Dawn T.
 
 Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]], [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]], [[or for the simulator working on idols and upsets|https://github.com/kjc9/blaseballgamesim]].</tw-passagedata><tw-passagedata pid="57" name="SnaxSheet" tags="" position="850,725" size="100,100">A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
 
-Talk about this usually is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="58" name="StadiumViewer" tags="" position="975,725" size="100,100">[[The Stadium Viewer|https://stadium-viewer.sibr.dev/]] renders blaseball stadiums based on their renovations and properties (such as grandiosity). On desktop, use WASD to rotate the stadium in space, and R+F for zooming. 
+Partial code on how the spreadsheet is populated is [[here|https://github.com/alefeld/blaseball-snackonomy]], supplemented by [[another SIBR bot|https://github.com/tehstone/blaseballwatcher]]. Major maintainers are tehstone, Frostbird, and Origami Robot.
+
+&lt;&lt;set $discussion_channel to &quot;econ-spreadsheets&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;
+
+More discussion about snack strats is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="58" name="StadiumViewer" tags="" position="975,725" size="100,100">[[The Stadium Viewer|https://stadium-viewer.sibr.dev/]] renders blaseball stadiums based on their renovations and properties (such as grandiosity). On desktop, use WASD to rotate the stadium in space, and R+F for zooming. 
 
 It&#39;s brought to you by Rose. [[Source here|https://github.com/RosaryMala/BlaseballStadiumViewer]].
 
