@@ -8,4 +8,6 @@ Discussion about finding and using these endpoints generally happens at @@.chann
 
 We also have a [[CORS proxy|https://cors-proxy.blaseball-reference.com/]] available for you, as well as a CSV redirect: you can replace a {{{blaseball.com}}} URL with {{{csv.sibr.dev}}} if that's a better format for you than JSON.
 
+There are some convenience wrappers and websocket support built by UnderMybrella, known as cors-mechanics - more info at [[this Discord message|https://discord.com/channels/738107179294523402/738107864605786253/848873501115940906]] and @@.channel;#blits-and-blasement@@ (in the '💼 Major Projects' role).
+
 The major caveat to using this is that endpoints tend to give current data, not historical data, on a per-game-event basis. [[Chronicler]] is your best bet for past events on that per-game-event basis, and [[Datablase]] is your choice collapsing game events to at-bats. It can also be hard to compare things across teams in some cases, where our downstream APIs will serve you better. Feel free to ask in @@.channel;#❓-help-desk@@ in 'The Society' for API help!
