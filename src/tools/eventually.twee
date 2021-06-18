@@ -5,7 +5,7 @@ Want to find every interaction between NaN and Forrest Best? [[Yep, you can do i
 
 You can find API documentation [[here|https://allie-signet.stoplight.io/docs/eventually/reference/eventually-api.v1.yaml]], or use the [[blaseball_mike wrapper for python|Mike]]. You can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that's a better format for you than JSON.
 
-There is a wrapper for Eventually for tracking upshells over time - [[Upnuts|https://github.com/UnderMybrella/whats-upnut/]], by UnderMybrella. More info on that @@.channel;#blits-and-blasement@@ (in the '💼 Major Projects' role).
+There is a wrapper for Eventually for tracking upshells over time - [[Upnuts|https://github.com/UnderMybrella/whats-upnut/]], by UnderMybrella. More info on that in @@.channel;#blits-and-blasement@@ (in the '💼 Major Projects' role).
 
 If you're looking for pre-S12 game events, you're probably better off using [[Chronicler]].
 
