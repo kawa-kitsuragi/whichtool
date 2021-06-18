@@ -8,5 +8,7 @@ It's brought to you by Astrid, and it's currently a work in progress. [[Contribu
 
 If you'd like, you can also support Astrid's efforts directly through her [[Patreon|https://www.patreon.com/floofstrid]].
 
-Notably, the newest player viewer currently does not have alternate color schemes for colorblindness. If you require that before this is added, try [[Abslve|https://slavfox.space/abslve/#SUN]] or [[the original viewer|https://stlats.sibr.dev]], but neither are in active development and may have unusual behavior (e.g. including Coffee Cup teams mixed with ILB teams, not reflecting items).
+There's also [[Astrology|http://yoori.space/astrology/]] from yoori - it does not have the search/filter functions, but does include derived ratings along some metrics, modifications, and fast load times. (Combined stars are shown by default; there's a toggle on the bottom for individual apple stats.) [[Source here|https://github.com/teagrrl/astrology/tree/master/astrology]], discussion at @@.channel;#yooris-player-viewer@@ (also in Major Projects). 
+
+Notably, the newest player viewers currently do not have alternate color schemes for colorblindness, and right now, Astrid's is only available in light mode. If you require that, try [[Abslve|https://slavfox.space/abslve/#SUN]] or [[the original viewer|https://stlats.sibr.dev]], but neither are in active development and may have unusual behavior (e.g. including Coffee Cup teams mixed with ILB teams, not reflecting items).
 
