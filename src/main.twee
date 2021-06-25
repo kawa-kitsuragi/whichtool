@@ -46,7 +46,6 @@ Setting.addToggle("lightmode", {
 
 :: StoryInit
 <<set $bot_choice to null>>
-<<set $snax_var to null>>
 <<set $blasebot_var to null>>
 <<set $discussion_channel to "📽-Projects">>
 <<remove "#menu-item-saves">>
@@ -67,8 +66,7 @@ What are you searching for?
 
 :: DiscordBots {"position":"1300, 25"}
 What are you hoping for your bot to do?
-[[Teach me about concessions|SnaxBot][$snax_var to "snacks"]]
-[[Tell me who to idol and possible upset bets|SnaxBot][$snax_var to "idols"]]
+[[Teach me about concessions|SnaxBot]]
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[Let me look up players and teams|Blasebot][$blasebot_var to "lookup"]]
 [[Tell me what's happening in my team's games and remind me of things|Blasebot][$blasebot_var to "alerts"]]
@@ -83,11 +81,8 @@ What are you hoping for your bot to do?
 <<set $discussion_channel to "📽-Projects">>
 
 /* Overrides */
-<<if $snax_var is "snacks">>
+<<if $bot_choice is "SnaxBot">>
   <<set $discussion_channel to "snax-bot">>
-<<elseif $snax_var is "idols">>
-  <<set _automata_channel to "pendant-recommendations">>
-  <<set $discussion_channel to "game-sim-sim-bot-aka-metasim-v2">>
 <<elseif $blasebot_var isnot null>>
   <<set $discussion_channel to "blasebot-project">>
 <<elseif $bot_choice is "CoolEvents">>
