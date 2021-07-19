@@ -1,0 +1,5 @@
+:: JQ
+
+Blaseball has a lot of data feeds and endpoints which will give your streams of [[JSON|https://en.wikipedia.org/wiki/JSON]] data. [[jq|https://stedolan.github.io/jq/]] is a program which makes it easier to parse, filter, and map through JSON data.
+
+[[Blaseball jq|https://jq.sibr.dev/]] combines these as a powerful web tool: pull JSON data from an endpoint, modify it as you want using jq, see your results live, and share the URL with others. It'll also let you play with random queries to help get a hang of things.
