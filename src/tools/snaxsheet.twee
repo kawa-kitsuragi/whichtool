@@ -1,6 +1,6 @@
 :: SnaxSheet
 
-A spreadsheet exists each season. The best place to find the current one is in the pins on @@.channel;#stats@@ on main unless we figure out some way to get this to auto-update with a new link regularly. 
+A spreadsheet exists each season. The most current one will always be [[here|https://snacks.sibr.dev]]
 
 Partial code on how the spreadsheet is populated is [[here|https://github.com/alefeld/blaseball-snackonomy]], supplemented by [[another SIBR bot|https://github.com/tehstone/blaseballwatcher]]. Major maintainers are tehstone, Frostbird, and Origami Robot.
 
