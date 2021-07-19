@@ -1,4 +1,4 @@
-:: Blaseball jq
+:: JQ
 
 Blaseball has a lot of data feeds and endpoints which will give your streams of [[JSON|https://en.wikipedia.org/wiki/JSON]] data. [[jq|https://stedolan.github.io/jq/]] is a program which makes it easier to parse, filter, and map through JSON data.
 
