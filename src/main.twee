@@ -132,6 +132,7 @@ What are you hoping to see?
 [[What time is it?|WallOfTime][$discussion_channel to "📽-Projects"]]
 [[A visual rendition of stadiums|StadiumViewer][$discussion_channel to "📽-Projects"]]
 [[Gift and renovation progress|GiftsRenos]]
+[[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
 [[None of these, take me back|WobSites]]
 
 :: HistoricalData
@@ -148,6 +149,7 @@ What are you hoping to see?
 [[Has this blaseball score been seen before?|Sclorigami]]
 [[Team level/credit rating over time|Levels]]
 [[Blaseball.com as it looked in the past|Before]]
+[[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
 [[None of these, take me back|WobSites]]
 
 :: SitesEtc
@@ -167,6 +169,7 @@ We're happy to serve you data. What do you need?
 [[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]]
 [[Seasonal and historical data, in mostly raw form|Chronicler]]
 [[Derived performance data, like batting averages|Datablase]]
+[[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
 [[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
 [[Some combo of the above, and by the way I'm using Python|Mike]]
 [[Some combo of the above, and by the way I'm using Kotlin|kornea][$discussion_channel to "brellas-blits-and-blasement"]]
