@@ -1,7 +1,7 @@
 :: Hloroscopes
 
-[[Hloroscopes|https://hloroscopes.sibr.dev]] plots how players' stars change over time (after events like blood drains, blessings, and the like). It's brought to you by yooori.
+[[Hloroscopes|https://hloroscopes.sibr.dev]] plots how teams' and players' stars change over time (after events like blood drains, blessings, and the like). It's brought to you by yooori.
 
-It includes toggles for Forbidden Knowledge and apple-stat changes and spacing of the x axis. [[Source here|https://github.com/teagrrl/astrology/tree/master/hloroscopes]].
+It includes toggles for Forbidden Knowledge and apple-stat changes and spacing of the x axis. If you select a team, the 'History' button shows team composition changes over time. [[Source here|https://github.com/teagrrl/astrology/tree/master/hloroscopes]].
 
 <<set $discussion_channel to "yooris-player-viewer">><<include WhereToDiscuss>>
