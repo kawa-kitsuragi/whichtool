@@ -4,4 +4,4 @@ Check out progress of [[team gifts|https://www.enbyss.com/content/tools/blasebal
 
 Brought to you by enbyss.
 
-<<set $discussion_channel to "📽-Projects">><<include WhereToDiscuss>>
+<<set $discussion_channel to "enbyss-eclectic-exhibitions">><<include WhereToDiscuss>>

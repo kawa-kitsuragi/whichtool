@@ -4,4 +4,4 @@ The [[Wall of Time|https://www.enbyss.com/content/tools/blaseball-time]] shows c
 
 Brought to you by Enbyss. 
 
-<<include WhereToDiscuss>>
+<<set $discussion_channel to "enbyss-eclectic-exhibitions">><<include WhereToDiscuss>>
