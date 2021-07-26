@@ -1,0 +1,5 @@
+:: MathChecker
+
+[[The Math Checker|https://faculty.sibr.dev/~dlareau/checker.html]] is a tool that checks if our current understanding of how eDensity is calculated is accurate. eDensity as displayed on the site (or Blaseball API) is compared to the value calculated based on SIBR's equations for eDensity. Green lights indicate a match for that player/team. Red lights indicate a mismatch, suggesting that some recent change needs to be accounted for by changing the formula for eDensity. Yellow lights indicate expected mismatches due to known features.
+
+It's brought to you by dlareau. Deeper discussion of immateria physics and eDensity is in @@.channel;#edensity-and-immateria-physics@@ - you'll need the "📖 Research" role in @@.channel;#roles-and-sigils@@ to see it. 
