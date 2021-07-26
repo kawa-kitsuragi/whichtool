@@ -11,4 +11,4 @@ If you're looking for pre-S12 game events, you're probably better off using [[Ch
 
 It's made by allie (sapphicfettucine#6248), and you can find the source code on [[this github repo|https://github.com/alisww/eventually]]
 
-<<set $discussion_channel to "eventuallie">><<include WhereToDiscuss>>
+<<set $discussion_channel to "eventuallie-and-blaseball-vcr">><<include WhereToDiscuss>>
