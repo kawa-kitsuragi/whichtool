@@ -149,6 +149,7 @@ What are you hoping to see?
 [[Show me how the salmon are running|SalmonScoreboard][$discussion_channel to "📽-Projects"]]
 [[Keep track of sick skateboarding moves|GrindRail][$discussion_channel to "📽-Projects"]]
 [[Has this blaseball score been seen before?|Sclorigami]]
+[[Team navigation around the map in Season 24|Levels]]
 [[Team level/credit rating over time|Levels]]
 [[Blaseball.com as it looked in the past|Before]]
 [[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
