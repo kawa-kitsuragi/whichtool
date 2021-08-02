@@ -393,15 +393,13 @@ Note if you want something similar to the &quot;Team Averages&quot; scatterplots
 
 &lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="ChartParty" tags="" position="350,350" size="100,100">[[ChartParty|http://yoori.space/chartparty]] plots win/loss charts for teams, including the option to look at past seasons. It&#39;s brought to you by yooori.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Chronicler" tags="" position="475,350" size="100,100">&lt;&lt;set $discussion_channel to &quot;chronicler&quot;&gt;&gt;
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Chronicler" tags="" position="475,350" size="100,100">Chronicler brings together game events and other data from the [[official API|OfficialAPI]] into a form that makes historical comparisons easier. It&#39;s brought to you by Astrid.
 
-Chronicler brings together game events and other data from the [[official API|OfficialAPI]] into a form that makes historical comparisons easier. It&#39;s brought to you by Astrid.
-
-API documentation [[here|https://astrid.stoplight.io/docs/sibr/reference/Chronicler.v1.yaml]]. A full list of update types is [[here|https://github.com/xSke/Chronicler/blob/main/SIBR.Storage.Data/Models/UpdateType.cs]]. Like for the official API, you can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
+API documentation [[here|https://docs.sibr.dev/]]. A full list of update types is [[here|https://github.com/xSke/Chronicler/blob/main/SIBR.Storage.Data/Models/UpdateType.cs]]. Like for the official API, you can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
 
 There will always be some delay between updates on the official API and Chronicler. If you need events in an at-bat as opposed to per-pitch format, you&#39;re better off using [[Datablase]]. If you&#39;d like to use Python, [[there&#39;s a wrapper available|Mike]]. If you&#39;d like more robust search of the S12-onwards Feed, you&#39;re probably better off using [[Eventually]].
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;
+&lt;&lt;set $discussion_channel to &quot;chronicler&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;
 
 If you&#39;d like, you can also support Astrid&#39;s efforts directly through her [[Patreon|https://www.patreon.com/floofstrid]].</tw-passagedata><tw-passagedata pid="25" name="CoolEvents" tags="" position="600,350" size="100,100">The Monitor watches for cycles, perfect games, and the like. It&#39;s brought to you by tehstone.
 
@@ -449,7 +447,7 @@ Brought to you by hexane. Source available [[here|https://github.com/hexane360/e
 &lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Eventually" tags="" position="225,475" size="100,100">Eventually is a small search engine API for the blaseball feed (Seasons 12 onwards), allowing you to search through it with as much or as little specificity as you want.
 Want to find every interaction between NaN and Forrest Best? [[Yep, you can do it!|https://api.sibr.dev/eventually/v2/events?playerTags=1f159bab-923a-4811-b6fa-02bfde50925a_and_d35ccee1-9559-49a1-aaa4-7809f7b5c46e]]
 
-You can find API documentation [[here|https://alisww.github.io/eventually/]], or use the [[blaseball_mike wrapper for python|Mike]]. You can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
+You can find API documentation [[here|https://docs.sibr.dev/]], or use the [[blaseball_mike wrapper for python|Mike]]. You can also use the {{{csv.sibr.dev}}} tool - you can replace an {{{api.sibr.dev}}} URL with {{{csv.sibr.dev}}} if that&#39;s a better format for you than JSON.
 
 There is a wrapper for Eventually for tracking upshells over time - [[Upnuts|https://github.com/UnderMybrella/whats-upnut/]], by UnderMybrella. More info on that in @@.channel;#brellas-blits-and-blasement@@ (in the &#39;💼 Major Projects&#39; role).
 
@@ -511,16 +509,15 @@ It&#39;s brought to you by dlareau. Deeper discussion of immateria physics and e
 
 [[Source here|https://github.com/kawa-kitsuragi/whichtool]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Mike" tags="" position="975,600" size="100,100">&lt;&lt;set $discussion_channel to &quot;blaseball-mike-dot-py&quot;&gt;&gt;
-[[blaseball_mike|https://jmaliksi.github.io/blaseball-mike/]] is a Python wrapper for the [[official API|OfficialAPI]], [[Chronicler]], [[Eventually]], and (partially) [[Datablase]].
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Mike" tags="" position="975,600" size="100,100">[[blaseball_mike|https://jmaliksi.github.io/blaseball-mike/]] is a Python wrapper for the [[official API|OfficialAPI]], [[Chronicler]], [[Eventually]], and (partially) [[Datablase]].
 
 Brought to you by ch00beh and Edgarware. Source code [[here|https://github.com/jmaliksi/blaseball-mike]].
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Notebooks" tags="" position="1100,600" size="100,100">[[These graphs|https://edgarware.github.io/blaseball_notebooks/star_average.html]] show team average stars changing over time. It&#39;s brought to you by Edgarware.
+&lt;&lt;set $discussion_channel to &quot;blaseball-mike-dot-py&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Notebooks" tags="" position="1100,600" size="100,100">[[These graphs|https://edgarware.github.io/blaseball_notebooks/star_average.html]] show team average stars changing over time. It&#39;s brought to you by Edgarware.
 
 Source [[here|https://github.com/Edgarware/blaseball_notebooks/blob/main/misc_notebooks/star_average.ipynb]]. Elsewhere in that repository are other Jupyter notebooks that may be of interest, mostly involving past elections, and a great [[tutorial|https://edgarware.github.io/blaseball_notebooks/tutorial.html]] on how to make your own!</tw-passagedata><tw-passagedata pid="50" name="OfficialAPI" tags="" position="1225,600" size="100,100">You can extract data directly from the API that powers blaseball.com itself. Since this is the data that powers the website, it&#39;s the fastest source for at-the-moment updates.
 
-We&#39;ve discovered a number of endpoints and try to collect documentation [[here|https://docs.sibr.dev/docs/apis/reference/Blaseball-API.v1.yaml]]. 
+We&#39;ve discovered a number of endpoints and try to collect documentation [[here|https://docs.sibr.dev/]]. 
 
 Discussion about finding and using these endpoints generally happens at @@.channel;#blaseball-api@@. You&#39;ll need the &#39;📖 Research&#39; role in @@.channel;#roles-and-sigils@@ to see this channel.
 
