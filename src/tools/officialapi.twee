@@ -2,7 +2,7 @@
 
 You can extract data directly from the API that powers blaseball.com itself. Since this is the data that powers the website, it's the fastest source for at-the-moment updates.
 
-We've discovered a number of endpoints and try to collect documentation [[here|https://docs.sibr.dev/docs/apis/reference/Blaseball-API.v1.yaml]]. 
+We've discovered a number of endpoints and try to collect documentation [[here|https://docs.sibr.dev/]]. 
 
 Discussion about finding and using these endpoints generally happens at @@.channel;#blaseball-api@@. You'll need the '📖 Research' role in @@.channel;#roles-and-sigils@@ to see this channel.
 
