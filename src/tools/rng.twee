@@ -16,4 +16,4 @@ This doesn't break Blaseball: there's still lots of uncertainty on how *future* 
 
 The RNG Viewer is built by honu, with annotations and data help from many in the SIBR community. [[Source here|https://github.com/dannybd/rng-viewer]].
 
-<<set $discussion_channel to "nominative-determinism">><<include WhereToDiscuss>>
+Discussion takes place in the @@.channel;#nominative-determinism@@ channel. You will need the '📖 Research' role to see it.
