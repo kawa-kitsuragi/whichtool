@@ -340,6 +340,7 @@ What are you searching for?
 [[Player and team IDs|BlaseGuids][$discussion_channel to &quot;📽-Projects&quot;]]
 [[Play around with stadium stats|Desmos]]
 [[Create a visual retelling of a game using historical data|Highlights]]
+[[Explore the depths of Blaseball&#39;s Random Number Generator to find hidden stats|RNGViewer]]
 [[About this tool itself|MetaWhich]]
 [[None of these, take me back|WobSites]]</tw-passagedata><tw-passagedata pid="15" name="NumberCrunchy" tags="" position="1300,75" size="100,100">We&#39;re happy to serve you data. What do you need?
 
@@ -556,56 +557,72 @@ If you&#39;d like, you can also support Astrid&#39;s efforts directly through he
 
 All known renovations across all teams are shown at the top, and you can hover over a renovation or a ballpark stat (once expanded) to see what it does. These expanded ballpark stats are mild FK potentially, as the current Blaseball.com website does not display specific values for these visually.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Salmon" tags="" position="725,725" size="100,100">Welcome to the Salmon Institute for Blaseball Research.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="RNGViewer" tags="" position="725,725" size="100,100">**tl;dr:** The [[https://rng.sibr.dev/|RNG Viewer]] (aka Nominative Determinism) displays streams of RNG outputs, with stats and manual annotations added nearby.
+
+**Context:**
+
+Computers are good at a lot of things, but they&#39;re generally *not* good at randomness. There are ways to generate truly random numbers, but in general they&#39;re slow and difficult. Things like, uh, well, Blaseball need a lot of random numbers: original stats generation for players, results from pitches, etc.
+
+To accomplish this randomness, Blaseball (and many other applications) use a Random Number Generator (RNG). RNGs generally work like this: take a number, apply some weird math to garble it, and output the result as a &quot;random&quot; number. Then re-garble that output to get a second number, re-garble *that* for a third, and so on. Each time you get a different &quot;random&quot; number, and it&#39;s good enough for whatever application you have.
+
+The source code of Blaseball uses `Math.random()` (a common RNG in JavaScript) to calculate game events, player stats, etc. as floating point numbers between 0 and 1. It turns out that the implementation of `Math.random()` is very good at creating random numbers but is *cryptographically weak*, meaning if you have a set of nearby `Math.random()` rolls, you can crack the RNG&#39;s internal state. This, in turn, let&#39;s you &quot;scroll&quot; forward and backward through the outputs before and after the rolls you input: it means, with some luck, **we can deterministically find the dice rolls of Blaseball**.
+
+For example: when Joel was generating the original roster of Blaseball players before Season 1, he ran `Math.random()` over and over in succession to spit out the stats for each player. Given some Chronicler data on the history of those stats, we&#39;ve been able to pinpoint [[the moment in the RNG&#39;s state|https://rng.sibr.dev/?s0=11489856334623440466&amp;s1=7665746933450455135&amp;offset=59]] when it output each player&#39;s internal stats, in order.
+
+This doesn&#39;t break Blaseball: there&#39;s still lots of uncertainty on how *future* events work, so we can only really use this to learn about Blaseball&#39;s past. However, it&#39;s an active area of development right now and we&#39;re learning more about lost info in the Blaseball sim&#39;s history.
+
+The RNG Viewer is built by honu, with annotations and data help from many in the SIBR community. [[Source here|https://github.com/dannybd/rng-viewer]].
+
+Discussion takes place in the @@.channel;#nominative-determinism@@ channel. You will need the &#39;📖 Research&#39; role to see it.</tw-passagedata><tw-passagedata pid="57" name="Salmon" tags="" position="850,725" size="100,100">Welcome to the Salmon Institute for Blaseball Research.
 you can find us at @@.channel;#crisp@@ under &#39;🐟 Salmon&#39;, and you&#39;ll need the matching role in @@.channel;#roles-and-sigils@@ to see it.
 
 [[This smells fishy. What is it all about?|SteveWriteup]]
 [[Tell me how good a blaseball player is at managing salmon fisheries|Yuuko]]
 [[I want to use python to run salmon simulations|salmon_lib]]
 [[I want to use an API to run salmon simulations|webcrisp]]
-[[I want to explore the original source|crisp_src]]</tw-passagedata><tw-passagedata pid="57" name="SteveWriteup" tags="" position="850,725" size="100,100">There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
+[[I want to explore the original source|crisp_src]]</tw-passagedata><tw-passagedata pid="58" name="SteveWriteup" tags="" position="975,725" size="100,100">There are many ways to enjoy blaseball—all valid. Some fans simply bet on matches. Others eagerly discuss their favorite teams and generate entire backstories for their players. There are fans who compile statistics, or draw fan art, or both.
 [[And some fans uncover hidden secrets in 25-year-old salmon modeling software.|https://salmon.sibr.dev/steve.html]]
 
 Honu discussed the salmon saga on Blaseball Sunday, if you prefer to listen to the interview:
 
 &lt;html&gt;
-&lt;div class=&quot;container&quot;&gt;&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://www.youtube.com/embed/L2poaPBgRmg?start=3065&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/html&gt;</tw-passagedata><tw-passagedata pid="58" name="salmon_lib" tags="" position="975,725" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="59" name="webcrisp" tags="" position="1100,725" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="60" name="crisp_src" tags="" position="1225,725" size="100,100">The University of Washington School of Fisheries Columbia Basin Research Group very generously sent us the code for CRiSP Harvest v 3.0.6, which we have [[mirrored on Github for research and archival|https://github.com/Society-for-Internet-Blaseball-Research/crisp]].
+&lt;div class=&quot;container&quot;&gt;&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://www.youtube.com/embed/L2poaPBgRmg?start=3065&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/html&gt;</tw-passagedata><tw-passagedata pid="59" name="salmon_lib" tags="" position="1100,725" size="100,100">SIBR&#39;s salmon sages have the tool for you: [[salmon_lib|https://github.com/Society-for-Internet-Blaseball-Research/salmon_lib]]</tw-passagedata><tw-passagedata pid="60" name="webcrisp" tags="" position="1225,725" size="100,100">We built a JSON API for 1995 salmon software. [[You can find it here.|https://github.com/Society-for-Internet-Blaseball-Research/webcrisp]]</tw-passagedata><tw-passagedata pid="61" name="crisp_src" tags="" position="100,850" size="100,100">The University of Washington School of Fisheries Columbia Basin Research Group very generously sent us the code for CRiSP Harvest v 3.0.6, which we have [[mirrored on Github for research and archival|https://github.com/Society-for-Internet-Blaseball-Research/crisp]].
 
 Due to particular C++ dependencies, it currently does not compile - if you have any resources on RogueWave, please get in touch with us in @@.channel;#crisp@@!
 
-&#39;&#39;Please keep in mind:&#39;&#39; [[Salmon Steve|SteveWriteup]]&#39;s identity is in this code. We can&#39;t, like, edit that out, but out of respect to his privacy please avoid including mentioning his last name, beyond the first initial. Steve U. is fine.</tw-passagedata><tw-passagedata pid="61" name="SalmonScoreboard" tags="" position="100,850" size="100,100">Salmon, under Salmon Weather (as of Season 15), steal runs by swimming upstream. [[This page|https://hora.github.io/blaseball-scoreboard/]] shows every game the salmon were in, and how many runs they took, as if they were a third team on the field. A white triangle indicates the ILB winner of the game; a pink triangle notes that the salmon had more Runs than at least one ILB team.
+&#39;&#39;Please keep in mind:&#39;&#39; [[Salmon Steve|SteveWriteup]]&#39;s identity is in this code. We can&#39;t, like, edit that out, but out of respect to his privacy please avoid including mentioning his last name, beyond the first initial. Steve U. is fine.</tw-passagedata><tw-passagedata pid="62" name="SalmonScoreboard" tags="" position="225,850" size="100,100">Salmon, under Salmon Weather (as of Season 15), steal runs by swimming upstream. [[This page|https://hora.github.io/blaseball-scoreboard/]] shows every game the salmon were in, and how many runs they took, as if they were a third team on the field. A white triangle indicates the ILB winner of the game; a pink triangle notes that the salmon had more Runs than at least one ILB team.
 
 Brought to you by Dawn T.
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Sclorigami" tags="" position="225,850" size="100,100">A new blaseball final score is called [[Sclorigami|https://sclorigami.sibr.dev]]! Brought to you by Ifh Biff.</tw-passagedata><tw-passagedata pid="63" name="SnaxBot" tags="" position="350,850" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Purveyor of Crates and Glitters can help you pick out snacks! The Jester is primarily written by tehstone; snack analysis by nago 🦀.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Sclorigami" tags="" position="350,850" size="100,100">A new blaseball final score is called [[Sclorigami|https://sclorigami.sibr.dev]]! Brought to you by Ifh Biff.</tw-passagedata><tw-passagedata pid="64" name="SnaxBot" tags="" position="475,850" size="100,100">&lt;&lt;set $bot_choice to &quot;SnaxBot&quot;&gt;&gt;Our friendly local Purveyor of Crates and Glitters can help you pick out snacks! The Jester is primarily written by tehstone; snack analysis by nago 🦀.
 
 &lt;&lt;include JoinUsForBots&gt;&gt;
 
-Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="64" name="SnaxSheet" tags="" position="475,850" size="100,100">A spreadsheet exists each season. The most current one will always be [[here|https://snacks.sibr.dev]]
+Check out the [[source for the bot|https://github.com/tehstone/blaseballwatcher/]] or [[for the snack optimizer itself|https://gitlab.com/-/snippets/2088936]].</tw-passagedata><tw-passagedata pid="65" name="SnaxSheet" tags="" position="600,850" size="100,100">A spreadsheet exists each season. The most current one will always be [[here|https://snacks.sibr.dev]]
 
 Partial code on how the spreadsheet is populated is [[here|https://github.com/alefeld/blaseball-snackonomy]], supplemented by [[another SIBR bot|https://github.com/tehstone/blaseballwatcher]]. Major maintainers are tehstone, Frostbird, and Origami Robot.
 
 &lt;&lt;set $discussion_channel to &quot;econ-spreadsheets&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;
 
-More discussion about snack strats is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="65" name="StadiumViewer" tags="" position="600,850" size="100,100">[[The Stadium Viewer|https://stadium-viewer.sibr.dev/]] renders blaseball stadiums based on their renovations and properties (such as grandiosity). On desktop, use WASD to rotate the stadium in space, and R+F for zooming. 
+More discussion about snack strats is in @@.channel;#💰-economy@@ under &#39;📖 Research&#39;. You&#39;ll need the matching role from @@.channel;#roles-and-sigils@@ to see it.</tw-passagedata><tw-passagedata pid="66" name="StadiumViewer" tags="" position="725,850" size="100,100">[[The Stadium Viewer|https://stadium-viewer.sibr.dev/]] renders blaseball stadiums based on their renovations and properties (such as grandiosity). On desktop, use WASD to rotate the stadium in space, and R+F for zooming. 
 
 It&#39;s brought to you by Rose. [[Source here|https://github.com/RosaryMala/BlaseballStadiumViewer]].
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Tome" tags="" position="725,850" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Tome" tags="" position="850,850" size="100,100">[[Tome|https://tome.sibr.dev/]] shows the results of each player&#39;s at bat and basic pitcher performance stats (e.g. number of strikeouts) in a given game. Brought to you by iliana and ch00beh. New features are in progress, to make this a tool for broadcasters.
 
 Source code [[here|https://github.com/Society-for-Internet-Blaseball-Research/tome]]. 
 
-&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="UserStyles" tags="" position="850,850" size="100,100">[[Blaseball Compact|https://thevdude.github.io/BlaseballCompact/]] is a Stylus userstyle to fit blaseball games during the regular season in a 3 x 4 grid. Consumer Contrast (at the same link) makes CONSUMERS stand out more on the page. Both are brought to you by theVdude.
+&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="UserStyles" tags="" position="975,850" size="100,100">[[Blaseball Compact|https://thevdude.github.io/BlaseballCompact/]] is a Stylus userstyle to fit blaseball games during the regular season in a 3 x 4 grid. Consumer Contrast (at the same link) makes CONSUMERS stand out more on the page. Both are brought to you by theVdude.
 
 [[Emoji fix|https://holmesmr.github.io/Blaseball-Userstyles/]] is another Stylus userstyle to fix the emoji of the Spies, Fridays, and Mechs, and un-ORBs the Talkers. It&#39;s brought to you by Cepheus. Note that the &#39;BIG SCREEN BLASEBALL&#39; style on this page is a prereq to Compact, but was not updated to fit the 2 extra games per day that were started in Season 13.
 
-[[Blaseball+|https://addons.mozilla.org/en-US/firefox/addon/blaseball-plus/]] adds functionality such as [[Reblase]] and [[Abslve|PlayerViewers][$discussion_channel to &quot;astrids-player-table&quot;]] links for Firefox. It&#39;s brought to you by leo60228.</tw-passagedata><tw-passagedata pid="68" name="VibeCheck" tags="" position="975,850" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
+[[Blaseball+|https://addons.mozilla.org/en-US/firefox/addon/blaseball-plus/]] adds functionality such as [[Reblase]] and [[Abslve|PlayerViewers][$discussion_channel to &quot;astrids-player-table&quot;]] links for Firefox. It&#39;s brought to you by leo60228.</tw-passagedata><tw-passagedata pid="69" name="VibeCheck" tags="" position="1100,850" size="100,100">[[VibeCheck|https://vibecheck.sibr.dev/]] plots player vibes by day based on our knowledge of the vibe formula. It attemps to do a collective team vibe as well, but currently doesn&#39;t reflect pitcher rotations correctly. It&#39;s brought to you by dlareau.
 
-Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="69" name="WallOfTime" tags="" position="1100,850" size="100,100">The [[Wall of Time|https://www.enbyss.com/content/tools/blaseball-time]] shows countdowns to the various points of the blaseball season, and lets you get browser notifications close to when they happen.
+Its source code is [[here|https://github.com/Society-for-Internet-Blaseball-Research/vibecheck]].</tw-passagedata><tw-passagedata pid="70" name="WallOfTime" tags="" position="1225,850" size="100,100">The [[Wall of Time|https://www.enbyss.com/content/tools/blaseball-time]] shows countdowns to the various points of the blaseball season, and lets you get browser notifications close to when they happen.
 
 Brought to you by Enbyss. 
 
-&lt;&lt;set $discussion_channel to &quot;enbyss-eclectic-exhibitions&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Yuuko" tags="" position="1225,850" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
+&lt;&lt;set $discussion_channel to &quot;enbyss-eclectic-exhibitions&quot;&gt;&gt;&lt;&lt;include WhereToDiscuss&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Yuuko" tags="" position="100,975" size="100,100">Ever wanted Yuuko from the hit anime Nichijou to tell you how bad your favourite blaseball player is at managing salmon fisheries, according to software from 1995?
 Well, uh, now you can.
 
 &lt;&lt;set $bot_choice to &quot;Yuuko&quot;&gt;&gt;
