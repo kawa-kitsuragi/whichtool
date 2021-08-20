@@ -1,0 +1,19 @@
+:: RNGViewer
+
+**tl;dr:** The [[https://rng.sibr.dev/|RNG Viewer]] (aka Nominative Determinism) displays streams of RNG outputs, with stats and manual annotations added nearby.
+
+**Context:**
+
+Computers are good at a lot of things, but they're generally *not* good at randomness. There are ways to generate truly random numbers, but in general they're slow and difficult. Things like, uh, well, Blaseball need a lot of random numbers: original stats generation for players, results from pitches, etc.
+
+To accomplish this randomness, Blaseball (and many other applications) use a Random Number Generator (RNG). RNGs generally work like this: take a number, apply some weird math to garble it, and output the result as a "random" number. Then re-garble that output to get a second number, re-garble *that* for a third, and so on. Each time you get a different "random" number, and it's good enough for whatever application you have.
+
+The source code of Blaseball uses `Math.random()` (a common RNG in JavaScript) to calculate game events, player stats, etc. as floating point numbers between 0 and 1. It turns out that the implementation of `Math.random()` is very good at creating random numbers but is *cryptographically weak*, meaning if you have a set of nearby `Math.random()` rolls, you can crack the RNG's internal state. This, in turn, let's you "scroll" forward and backward through the outputs before and after the rolls you input: it means, with some luck, **we can deterministically find the dice rolls of Blaseball**.
+
+For example: when Joel was generating the original roster of Blaseball players before Season 1, he ran `Math.random()` over and over in succession to spit out the stats for each player. Given some Chronicler data on the history of those stats, we've been able to pinpoint [[the moment in the RNG's state|https://rng.sibr.dev/?s0=11489856334623440466&s1=7665746933450455135&offset=59]] when it output each player's internal stats, in order.
+
+This doesn't break Blaseball: there's still lots of uncertainty on how *future* events work, so we can only really use this to learn about Blaseball's past. However, it's an active area of development right now and we're learning more about lost info in the Blaseball sim's history.
+
+The RNG Viewer is built by honu, with annotations and data help from many in the SIBR community. [[Source here|https://github.com/dannybd/rng-viewer]].
+
+Discussion takes place in the @@.channel;#nominative-determinism@@ channel. You will need the '📖 Research' role to see it.
