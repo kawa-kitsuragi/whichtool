@@ -57,6 +57,7 @@ Setting.addToggle("lightmode", {
 :: Intro {"position":"1100,50","size":"100,100"}
 
 Congratulations on enjoying the cultural event of Blaseball!
+<strong>Note: as Blaseball enters a new Era, tools listed here may break. Please respect developer's paces - we're all volunteers here.</strong>
 
 What are you searching for?
 [[A Discord bot|DiscordBots]]
