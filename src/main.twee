@@ -179,6 +179,7 @@ We're happy to serve you data. What do you need?
 [[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
 [[Some combo of the above, and by the way I'm using Python|Mike]]
 [[Some combo of the above, and by the way I'm using Kotlin|kornea][$discussion_channel to "brellas-blits-and-blasement"]]
+[[Historical data, accessible without a network connection|blaseball.vcr]]
 
 :: Other
 What could you be looking for?
