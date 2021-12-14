@@ -1,0 +1,9 @@
+:: Bricks
+
+[[Bricks|https://bricks.sibr.dev]] brings together various statistics and box scores in one place, focused on Short Circuits play. 
+
+You can choose within a single SC season to look at any team or single player view. The team view includes a W/L over .500 chart; clicking on an individual bar will show the box score for that game. 
+
+It's brought to you by iliana. [[Source here.|https://github.com/iliana/bricks]]
+
+<<set $discussion_channel to "bricks-🧱">><<include WhereToDiscuss>>

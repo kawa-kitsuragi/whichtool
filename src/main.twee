@@ -83,9 +83,7 @@ What are you hoping for your bot to do?
 <<set $discussion_channel to "📽-Projects">>
 
 /* Overrides */
-<<if $bot_choice is "SnaxBot">>
-  <<set $discussion_channel to "snax-bot">>
-<<elseif $blasebot_var isnot null>>
+<<if $blasebot_var isnot null>>
   <<set $discussion_channel to "blasebot-project">>
 <<elseif $bot_choice is "CoolEvents">>
   <<set _automata_channel to "statistical-significance">>
@@ -137,6 +135,7 @@ What are you hoping to see?
 [[Recent Library reveals and upscaled Book events|Herring]]
 [[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
 [[Check on eDensity math|MathChecker]]
+[[Performance statistics, box scores, and statistical frivolities for short circuits|Bricks]]
 [[None of these, take me back|WobSites]]
 
 :: HistoricalData
