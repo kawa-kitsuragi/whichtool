@@ -1,0 +1,7 @@
+:: Sproutella's Statistics Compendium
+
+[[The Compendium of Blaseball Advanced Statistics|https://sproutella.shinyapps.io/compendium/]] displays a multitude of seasonal and career derived statistics for players and teams, including stats which are wholly unique to Blaseball. While it does display much of the same information which is displayed in Blaseball Reference, it differs in not having individual pages for players or teams, but does bring up a scatter plot of the displayed data for easy visual analysis. It is programmed in the R programming language. Data is exportable from the Compendium as CSV files, for use in further analysis as desired.
+
+It's brought to you by Sproutella. The source code is visible here: [[https://github.com/yellowstonemagicstats/shinyapp]]
+
+<<include WhereToDiscuss>>
