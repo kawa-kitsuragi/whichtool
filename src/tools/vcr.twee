@@ -2,8 +2,8 @@
 
 blaseball.vcr is an offline copy of the [[Chronicler]] API, giving you access to SIBR's entire archive of Blaseball history using just 200MB of disk space.  
 
-It powered [[Project Voyager|https://twitter.com/ilianaquorum/status/1428840847185960967]], where we fit the entirety of Blaseball's beta into a CD-R. You can download the latest Linux release [[here|https://github.com/alisww/blaseball.vcr/releases]].
+It powered [[Project Voyager|https://faculty.sibr.dev/~iliana/voyager/rc4/]], where we fit the entirety of Blaseball's beta into a CD-R. You can download the latest Linux release [[here|https://github.com/alisww/blaseball.vcr/releases]].
 
-It's made by allie (sapphicfettucine#6248), and you can find the source code on [[this github repo|https://github.com/alisww/blaseball.vcr]].
+It's made by emily (sapphicfettucine#6248), and you can find the source code on [[this github repo|https://github.com/emily-signet/blaseball.vcr]].
 
-<<set $discussion_channel to "eventuallie-and-blaseball-vcr">><<include WhereToDiscuss>>
+<<set $discussion_channel to "eventuemily-and-blaseball-vcr">><<include WhereToDiscuss>>
