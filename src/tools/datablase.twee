@@ -10,16 +10,19 @@ The ''Datablase'' is our fancy name for a stack of technology that does the foll
 
 <<include WhereToDiscuss>>
 
-[[Learn more about how it works or contribute to it|Contributing]]
+[[Learn more about how it works or contribute to it|Contributing]] ✅
 [[Get some data from it by using an API endpoint|DatablaseApi]]
-[[Get some data from it by handcrafting my own artisanal SQL queries|GuestAccess]]
+[[Get some data from it by handcrafting my own artisanal SQL queries|GuestAccess]] ✅
 
 :: Contributing
 
-The two major Github projects that constitute the Datablase are:
+The major Github projects that constitute the Datablase are:
+
+[[Citadel|https://github.com/Society-for-Internet-Blaseball-Research/citadel]]
+Coronation Era Chronicler to Datablase Loader, in Python. 
 
 [[Prophesizer|https://github.com/Society-for-Internet-Blaseball-Research/prophesizer]]
-C# application that parses raw game updates into game events describing all the pitches that happened during an at-bat (mostly).
+C# application that parses raw game updates into game events describing all the pitches that happened during an at-bat (mostly). (Discipline/Expansion only, here for reference.)
 
 [[Datablase|https://github.com/Society-for-Internet-Blaseball-Research/datablase]]
 Javascript application that exposes API endpoints for fetching DB information.
