@@ -1,14 +1,17 @@
 :: PlayerViewers
 
-The current "best source" for apple stats (such as divinity and shakesperianism) is [[this player viewer|https://blaseballplayers.netlify.app/]]. It features robust searching and filtering, the ability to save subsets of players for easy comparison, as well as noting additions/subtractions due to items in italics.
+The current best source for player attributes (such as reach and guile) is [[Astrology|https://astrology-next.vercel.app/]]. (Combined stars are shown by default; there's a toggle on the bottom for individual attributes.) [[Source here|https://github.com/teagrrl/astrology-next]].
 
-It's brought to you by Astrid, and it's currently a work in progress. [[Contribute to the source here|https://github.com/xSke/blaseball-player-list]].
-
+<<set $discussion_channel to "yooris-astrology-project">>
 <<include WhereToDiscuss>>
 
-If you'd like, you can also support Astrid's efforts directly through her [[Patreon|https://www.patreon.com/floofstrid]].
+Historical tools below this line:
 
-There's also [[Astrology|http://yoori.space/astrology/]] from yoori - it does not have the search/filter functions, but does include derived ratings along some metrics, modifications, and fast load times. (Combined stars are shown by default; there's a toggle on the bottom for individual apple stats.) [[Source here|https://github.com/teagrrl/astrology/tree/master/astrology]], discussion at @@.channel;#yooris-player-viewer@@ (also in Major Projects). 
+The past source for Beta-era "apple stats" (such as divinity and shakesperianism) was [[this player viewer|https://blaseballplayers.netlify.app/]]. It features robust searching and filtering, the ability to save subsets of players for easy comparison, as well as noting additions/subtractions due to items in italics.
 
-Notably, the newest player viewers currently do not have alternate color schemes for colorblindness, and right now, Astrid's is only available in light mode. If you require that, try [[Abslve|https://slavfox.space/abslve/#SUN]] or [[the original viewer|https://stlats.sibr.dev]], but neither are in active development and may have unusual behavior (e.g. including Coffee Cup teams mixed with ILB teams, not reflecting items).
+It's brought to you by Astrid, and it's currently a work in progress. [[Contribute to the source here|https://github.com/xSke/blaseball-player-list]]. If you'd like, you can also support Astrid's efforts directly through her [[Patreon|https://www.patreon.com/floofstrid]].
+
+There's also (historical, not to be confused with the above Coronation-era) [[Legacy Astrology|https://astrology-next.vercel.app/legacy/teams]] from yoori - it does not have the search/filter functions, but does include derived ratings along some metrics, modifications, and fast load times. (Combined stars are shown by default; there's a toggle on the bottom for individual apple stats.) [[Source here|https://github.com/teagrrl/astrology/tree/master/astrology]]. 
+
+Other past player viewers were [[Abslve|https://slavfox.space/abslve/#SUN]] and [[the original viewer|https://stlats.sibr.dev]].
 
