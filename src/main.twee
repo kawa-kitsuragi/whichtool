@@ -125,10 +125,10 @@ What are you hoping to see?
 
 :: CurrentData
 [[Teach me about concessions, schedules, and matchups|SnaxSheet]]
-[[Player apple stats and items right now|PlayerViewers][$discussion_channel to "astrids-player-table"]]
+[[Player attributes and items right now|PlayerViewers][$discussion_channel to "astrids-player-table"]] ✅
 [[Vibes over the course of the current season|VibeCheck]]
-[[Comparing teams to each other this season|Chartographer][$discussion_channel to "📽-Projects"]]
-[[How many games to the playoffs/party time|PlayoffTables][$discussion_channel to "📽-Projects"]]
+[[Comparing teams to each other this season|Chartographer][$discussion_channel to "📽-Projects"]] ✅
+[[How many games to the playoffs/party time|PlayoffTables][$discussion_channel to "📽-Projects"]] ✅
 [[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to "blases-loaded"]]
 [[A visual guide to contributions to current team eDensity|eDensitySimulator][$discussion_channel to "📽-Projects"]]
 [[What time is it?|WallOfTime][$discussion_channel to "📽-Projects"]]
@@ -141,7 +141,7 @@ What are you hoping to see?
 [[None of these, take me back|WobSites]]
 
 :: HistoricalData
-[[Past game logs and schedules|Reblase]]
+[[Past game logs and schedules|Reblase]] ✅
 [[Win/Loss in this season and past ones|ChartParty]]
 [[Schedules and derived performance like batting averages|BlaseballReference][$discussion_channel to "blaseball-reference"]]
 [[More advanced derived performances like WhAT (Wins historical Above Tokyo (Lift))|Sproutella's Statistics Compendium][$discussion_channel to "sproutellas-statistics-compendium"]]
@@ -156,7 +156,8 @@ What are you hoping to see?
 [[Team navigation around the map in Season 24|Levels]]
 [[Team level/credit rating over time|Levels]]
 [[Blaseball.com as it looked in the past|Before]]
-[[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
+[[Recent site takeovers during Coronation|Takeovers]] ✅
+[[A raw JSON data parser as a web tool which can help answer data queries|JQ]] ✅
 [[None of these, take me back|WobSites]]
 
 :: SitesEtc
@@ -174,10 +175,10 @@ What are you hoping to see?
 :: NumberCrunchy {"position":"1300,75"}
 We're happy to serve you data. What do you need?
 
-[[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]]
-[[Seasonal and historical data, in mostly raw form|Chronicler]]
-[[Derived performance data, like batting averages|Datablase]]
-[[A raw JSON data parser as a web tool which can help answer data queries|JQ]]
+[[Direct from the Blaseball Gods, fast and somewhat messy|OfficialAPI]] ✅
+[[Seasonal and historical data, in mostly raw form|Chronicler]] ✅
+[[Derived performance data, like batting averages|Datablase]] ✅
+[[A raw JSON data parser as a web tool which can help answer data queries|JQ]] ✅
 [[I want to search through the blaseball event feed, with as much specificity as possible|Eventually]]
 [[Some combo of the above, and by the way I'm using Python|Mike]]
 [[Some combo of the above, and by the way I'm using Kotlin|kornea][$discussion_channel to "brellas-blits-and-blasement"]]
@@ -187,7 +188,7 @@ We're happy to serve you data. What do you need?
 What could you be looking for?
 
 [[Have a bot announce blaseball games for me|Jlohn][$discussion_channel to "ch00bs-cursed-projects"]]
-[[Tell me about this tool|MetaWhich]]
+[[Tell me about this tool|MetaWhich]] ✅
 [[Tell me about fishery management|Salmon]]
-[[User styles for enhancing my blaseball browser experience|UserStyles]]
+[[User styles for enhancing my blaseball browser experience|UserStyles]] ✅
 [[Watch games in a visual way, including on my mobile devices|BlasesLoaded][$discussion_channel to "blases-loaded"]]
