@@ -4,4 +4,5 @@
 
 Note if you want something similar to the "Team Averages" scatterplots but over time, there's a nice viewer in [[Edgarware's Jupyter Notebooks|Notebooks]].
 
+<<set $discussion_channel to "#chartographer">>
 <<include WhereToDiscuss>>
