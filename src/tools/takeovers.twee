@@ -1,0 +1,7 @@
+:: Takeovers
+
+Sometimes Entities of various kinds "take over" the Blaseball website. A historical log of these in the Coronation Era is available [[here|https://www.enbyss.com/tools/blaseball-takeovers]].
+
+Brought to you by enbyss. 
+
+<<set $discussion_channel to "enigmas-of-the-enbyss">><<include WhereToDiscuss>>
